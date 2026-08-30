@@ -180,9 +180,15 @@ export async function setMainProductImage(
 }
 
 // Orders (admin)
-export async function getAdminOrders(token: string): Promise<Order[]> {
-  const result = await apiFetch<Paginated<Order>>("/admin/orders?per_page=100", token);
-  return result.data;
+export async function getAdminOrders(
+  token: string,
+  params?: { page?: number; perPage?: number }
+): Promise<Paginated<Order>> {
+  const query = new URLSearchParams();
+  query.set("per_page", String(params?.perPage ?? 20));
+  if (params?.page) query.set("page", String(params.page));
+
+  return apiFetch<Paginated<Order>>(`/admin/orders?${query.toString()}`, token);
 }
 
 export async function getAdminOrder(token: string, id: number): Promise<Order> {

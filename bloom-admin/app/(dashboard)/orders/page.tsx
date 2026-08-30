@@ -1,13 +1,17 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { useAuth } from "@/context/AuthContext";
 import { useSettings } from "@/context/SettingsContext";
 import { getAdminOrders } from "@/lib/api";
 import { formatPrice } from "@/lib/currency";
 import { ORDER_STATUS_LABELS, type Order } from "@/types/order";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+
+const PER_PAGE = 20;
 
 const statusVariant: Record<string, "default" | "secondary" | "destructive"> = {
   pending: "secondary",
@@ -22,13 +26,19 @@ export default function OrdersPage() {
   const { currency } = useSettings();
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
+  const [page, setPage] = useState(1);
+  const [meta, setMeta] = useState<{ current_page: number; last_page: number; total: number } | null>(null);
 
   useEffect(() => {
     if (!token) return;
-    getAdminOrders(token)
-      .then(setOrders)
+    setLoading(true);
+    getAdminOrders(token, { page, perPage: PER_PAGE })
+      .then((result) => {
+        setOrders(result.data);
+        setMeta(result.meta ?? null);
+      })
       .finally(() => setLoading(false));
-  }, [token]);
+  }, [token, page]);
 
   return (
     <div className="space-y-6">
@@ -122,6 +132,36 @@ export default function OrdersPage() {
               </tbody>
             </table>
           </div>
+
+          {/* Pagination */}
+          {meta && meta.last_page > 1 && (
+            <div className="flex items-center justify-between pt-2">
+              <p className="text-sm text-muted-foreground">
+                Page {meta.current_page} sur {meta.last_page} · {meta.total} commande
+                {meta.total > 1 ? "s" : ""}
+              </p>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setPage((p) => Math.max(1, p - 1))}
+                  disabled={meta.current_page <= 1}
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  Précédent
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setPage((p) => Math.min(meta.last_page, p + 1))}
+                  disabled={meta.current_page >= meta.last_page}
+                >
+                  Suivant
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          )}
         </>
       )}
     </div>

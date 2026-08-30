@@ -15,6 +15,7 @@ export default function DashboardPage() {
   const { currency } = useSettings();
   const [productCount, setProductCount] = useState<number | null>(null);
   const [categoryCount, setCategoryCount] = useState<number | null>(null);
+  const [orderCount, setOrderCount] = useState<number | null>(null);
   const [recentOrders, setRecentOrders] = useState<Order[]>([]);
 
   useEffect(() => {
@@ -24,13 +25,16 @@ export default function DashboardPage() {
       setProductCount(result.meta?.total ?? result.data.length)
     );
     getCategories().then((categories) => setCategoryCount(categories.length));
-    getAdminOrders(token).then((orders) => setRecentOrders(orders.slice(0, 5)));
+    getAdminOrders(token, { perPage: 5 }).then((result) => {
+      setRecentOrders(result.data);
+      setOrderCount(result.meta?.total ?? result.data.length);
+    });
   }, [token]);
 
   const stats = [
     { label: "Produits", value: productCount, icon: Package, href: "/products" },
     { label: "Catégories", value: categoryCount, icon: ListTree, href: "/categories" },
-    { label: "Commandes", value: recentOrders.length, icon: ShoppingBag, href: "/orders" },
+    { label: "Commandes", value: orderCount, icon: ShoppingBag, href: "/orders" },
   ];
 
   return (
