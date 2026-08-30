@@ -29,6 +29,7 @@ export default function BannersPage() {
     setLoading(true);
     getAdminBanners(token)
       .then(setBanners)
+      .catch(() => {})
       .finally(() => setLoading(false));
   };
 

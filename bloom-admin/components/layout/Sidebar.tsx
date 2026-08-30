@@ -1,6 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { useAuth } from "@/context/AuthContext";
 import { cn } from "@/lib/utils";
 import {
@@ -15,7 +22,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const navItems = [
   { href: "/", label: "Tableau de bord", icon: LayoutDashboard },
@@ -35,6 +42,8 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
   const { user, logout } = useAuth();
   const router = useRouter();
+  const [confirmLogoutOpen, setConfirmLogoutOpen] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
 
   useEffect(() => {
     onClose();
@@ -45,8 +54,14 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   const handleLogout = async () => {
-    await logout();
-    router.push("/login");
+    setLoggingOut(true);
+    try {
+      await logout();
+      router.push("/login");
+    } finally {
+      setLoggingOut(false);
+      setConfirmLogoutOpen(false);
+    }
   };
 
   return (
@@ -110,13 +125,42 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
             variant="ghost"
             size="sm"
             className="w-full justify-start gap-2 text-muted-foreground"
-            onClick={handleLogout}
+            onClick={() => setConfirmLogoutOpen(true)}
           >
             <LogOut className="h-4 w-4" />
             Déconnexion
           </Button>
         </div>
       </aside>
+
+      <Dialog open={confirmLogoutOpen} onOpenChange={setConfirmLogoutOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Se déconnecter</DialogTitle>
+          </DialogHeader>
+          <p className="text-sm text-muted-foreground">
+            Voulez-vous vraiment vous déconnecter du panneau
+            d&apos;administration ?
+          </p>
+          <DialogFooter>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => setConfirmLogoutOpen(false)}
+            >
+              Annuler
+            </Button>
+            <Button
+              type="button"
+              variant="destructive"
+              onClick={handleLogout}
+              disabled={loggingOut}
+            >
+              {loggingOut ? "Déconnexion..." : "Se déconnecter"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

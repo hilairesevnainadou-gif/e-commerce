@@ -40,7 +40,11 @@ class SettingController extends Controller
             'bank_name' => ['nullable', 'string', 'max:255'],
             'bank_iban' => ['nullable', 'string', 'max:34'],
             'bank_bic' => ['nullable', 'string', 'max:11'],
+            'notify_new_orders' => ['nullable', 'boolean'],
+            'notification_email' => ['nullable', 'email', 'max:255'],
         ]);
+
+        $data['notify_new_orders'] = $request->boolean('notify_new_orders');
 
         $settings = Setting::current();
 

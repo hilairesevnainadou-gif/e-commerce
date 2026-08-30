@@ -28,6 +28,8 @@ class Setting extends Model
         'bank_name',
         'bank_iban',
         'bank_bic',
+        'notify_new_orders',
+        'notification_email',
     ];
 
     protected function casts(): array
@@ -37,6 +39,7 @@ class Setting extends Model
             'free_shipping_threshold' => 'decimal:2',
             'international_shipping_fee' => 'decimal:2',
             'sale_ends_at' => 'datetime',
+            'notify_new_orders' => 'boolean',
         ];
     }
 

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Api\Admin\BannerController as AdminBannerController;
 use App\Http\Controllers\Api\Admin\CategoryController as AdminCategoryController;
+use App\Http\Controllers\Api\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Api\Admin\NotificationController as AdminNotificationController;
 use App\Http\Controllers\Api\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Api\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Api\Admin\SettingController as AdminSettingController;
@@ -45,6 +47,11 @@ Route::middleware('auth:sanctum')->group(function () {
 
 // Admin only
 Route::middleware(['auth:sanctum', 'admin'])->prefix('admin')->group(function () {
+    Route::get('dashboard', [AdminDashboardController::class, 'index']);
+    Route::get('notifications', [AdminNotificationController::class, 'index']);
+    Route::get('notifications/unread-count', [AdminNotificationController::class, 'unreadCount']);
+    Route::post('notifications/read-all', [AdminNotificationController::class, 'markAllRead']);
+    Route::post('notifications/{notification}/read', [AdminNotificationController::class, 'markRead']);
     Route::apiResource('products', AdminProductController::class);
     Route::delete('products/{product}/images/{image}', [AdminProductController::class, 'destroyImage']);
     Route::patch('products/{product}/images/{image}/main', [AdminProductController::class, 'setMainImage']);

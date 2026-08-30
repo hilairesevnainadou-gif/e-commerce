@@ -1,6 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
 import { useCart } from "@/context/CartContext";
 import { useSettings } from "@/context/SettingsContext";
@@ -9,6 +16,7 @@ import { cn } from "@/lib/utils";
 import type { CartItem as CartItemType } from "@/types/cart";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 interface CartItemProps {
   item: CartItemType;
@@ -18,6 +26,12 @@ interface CartItemProps {
 export default function CartItem({ item, isLast }: CartItemProps) {
   const { removeFromCart, updateQuantity, updateVariant } = useCart();
   const { currency } = useSettings();
+  const [confirmRemoveOpen, setConfirmRemoveOpen] = useState(false);
+
+  const handleRemove = () => {
+    removeFromCart(item.id, item.size, item.color);
+    setConfirmRemoveOpen(false);
+  };
 
   const current = { size: item.size, color: item.color };
   const canEditSize = !!item.availableSizes?.length;
@@ -57,7 +71,7 @@ export default function CartItem({ item, isLast }: CartItemProps) {
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => removeFromCart(item.id, item.size, item.color)}
+              onClick={() => setConfirmRemoveOpen(true)}
               className="text-muted-foreground hover:text-destructive h-10 w-10 shrink-0"
             >
               <Trash2 className="h-4 w-4" />
@@ -154,6 +168,29 @@ export default function CartItem({ item, isLast }: CartItemProps) {
       </div>
 
       {!isLast && <Separator className="mt-4" />}
+
+      <Dialog open={confirmRemoveOpen} onOpenChange={setConfirmRemoveOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Retirer l&apos;article</DialogTitle>
+          </DialogHeader>
+          <p className="text-sm text-muted-foreground">
+            Retirer « {item.name} » de votre panier ?
+          </p>
+          <DialogFooter>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => setConfirmRemoveOpen(false)}
+            >
+              Annuler
+            </Button>
+            <Button type="button" variant="destructive" onClick={handleRemove}>
+              Retirer
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

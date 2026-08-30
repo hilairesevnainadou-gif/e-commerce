@@ -16,6 +16,7 @@ export default function EditCategoryPage() {
       .then((categories) => {
         setCategory(categories.find((c) => c.id === Number(id)) || null);
       })
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, [id]);
 

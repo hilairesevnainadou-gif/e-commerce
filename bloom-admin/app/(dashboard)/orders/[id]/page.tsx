@@ -4,6 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
   Select,
   SelectContent,
   SelectItem,
@@ -42,11 +49,13 @@ export default function OrderDetailPage() {
   const [order, setOrder] = useState<Order | null>(null);
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState(false);
+  const [confirmCancelOpen, setConfirmCancelOpen] = useState(false);
 
   useEffect(() => {
     if (!token) return;
     getAdminOrder(token, Number(id))
       .then(setOrder)
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, [token, id]);
 
@@ -59,6 +68,19 @@ export default function OrderDetailPage() {
     } finally {
       setUpdating(false);
     }
+  };
+
+  const handleStatusSelect = (status: string) => {
+    if (status === "cancelled" && order?.status !== "cancelled") {
+      setConfirmCancelOpen(true);
+      return;
+    }
+    handleStatusChange(status);
+  };
+
+  const confirmCancelOrder = async () => {
+    await handleStatusChange("cancelled");
+    setConfirmCancelOpen(false);
   };
 
   if (loading) {
@@ -193,7 +215,7 @@ export default function OrderDetailPage() {
             <CardContent className="space-y-3">
               <Select
                 value={order.status}
-                onValueChange={handleStatusChange}
+                onValueChange={handleStatusSelect}
                 disabled={updating}
               >
                 <SelectTrigger>
@@ -262,6 +284,35 @@ export default function OrderDetailPage() {
           </Card>
         </div>
       </div>
+
+      <Dialog open={confirmCancelOpen} onOpenChange={setConfirmCancelOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Annuler la commande</DialogTitle>
+          </DialogHeader>
+          <p className="text-sm text-muted-foreground">
+            Êtes-vous sûr de vouloir annuler la commande {order.reference} ?
+            Le paiement associé sera marqué comme non réglé.
+          </p>
+          <DialogFooter>
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => setConfirmCancelOpen(false)}
+            >
+              Retour
+            </Button>
+            <Button
+              type="button"
+              variant="destructive"
+              onClick={confirmCancelOrder}
+              disabled={updating}
+            >
+              {updating ? "Annulation..." : "Annuler la commande"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

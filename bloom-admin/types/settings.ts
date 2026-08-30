@@ -20,4 +20,6 @@ export interface Settings {
   bank_name: string | null;
   bank_iban: string | null;
   bank_bic: string | null;
+  notify_new_orders: boolean;
+  notification_email: string | null;
 }

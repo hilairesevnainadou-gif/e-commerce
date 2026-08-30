@@ -37,6 +37,7 @@ export default function OrdersPage() {
         setOrders(result.data);
         setMeta(result.meta ?? null);
       })
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, [token, page]);
 

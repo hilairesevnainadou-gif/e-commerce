@@ -31,6 +31,8 @@ class SettingResource extends JsonResource
             'bank_name' => $this->bank_name,
             'bank_iban' => $this->bank_iban,
             'bank_bic' => $this->bank_bic,
+            'notify_new_orders' => (bool) $this->notify_new_orders,
+            'notification_email' => $this->notification_email,
         ];
     }
 }

@@ -17,6 +17,7 @@ export default function EditProductPage() {
     if (!token) return;
     getAdminProduct(token, Number(id))
       .then(setProduct)
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, [token, id]);
 

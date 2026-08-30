@@ -88,6 +88,7 @@ export default function ProductsPage() {
         setProducts(result.data);
         setMeta(result.meta ?? null);
       })
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, [token, page, search, category]);
 

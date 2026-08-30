@@ -17,6 +17,7 @@ export default function EditBannerPage() {
     if (!token) return;
     getAdminBanner(token, Number(id))
       .then(setBanner)
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, [token, id]);
 

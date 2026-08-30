@@ -2,6 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -62,6 +69,7 @@ export default function ProductForm({ product }: { product?: Product }) {
   );
   const [stagedFiles, setStagedFiles] = useState<StagedFile[]>([]);
   const [imageActionId, setImageActionId] = useState<number | null>(null);
+  const [imageToDelete, setImageToDelete] = useState<ProductImage | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -95,18 +103,18 @@ export default function ProductForm({ product }: { product?: Product }) {
     });
   };
 
-  const handleDeleteExistingImage = async (image: ProductImage) => {
-    if (!token || !product) return;
-    if (!confirm("Supprimer cette image ?")) return;
+  const handleDeleteExistingImage = async () => {
+    if (!token || !product || !imageToDelete) return;
 
-    setImageActionId(image.id);
+    setImageActionId(imageToDelete.id);
     try {
-      const updated = await deleteProductImage(token, product.id, image.id);
+      const updated = await deleteProductImage(token, product.id, imageToDelete.id);
       setExistingImages(updated.images ?? []);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Impossible de supprimer l'image.");
     } finally {
       setImageActionId(null);
+      setImageToDelete(null);
     }
   };
 
@@ -158,6 +166,7 @@ export default function ProductForm({ product }: { product?: Product }) {
   };
 
   return (
+    <>
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid lg:grid-cols-3 gap-6 items-start">
         <div className="lg:col-span-2 space-y-6">
@@ -305,7 +314,7 @@ export default function ProductForm({ product }: { product?: Product }) {
                           className="h-8 w-8"
                           title="Supprimer l'image"
                           disabled={imageActionId === image.id}
-                          onClick={() => handleDeleteExistingImage(image)}
+                          onClick={() => setImageToDelete(image)}
                         >
                           <X className="h-4 w-4" />
                         </Button>
@@ -440,5 +449,34 @@ export default function ProductForm({ product }: { product?: Product }) {
         </Button>
       </div>
     </form>
+
+    <Dialog
+      open={!!imageToDelete}
+      onOpenChange={(open) => !open && setImageToDelete(null)}
+    >
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Supprimer l&apos;image</DialogTitle>
+        </DialogHeader>
+        <p className="text-sm text-muted-foreground">
+          Êtes-vous sûr de vouloir supprimer cette image du produit ? Cette
+          action est irréversible.
+        </p>
+        <DialogFooter>
+          <Button type="button" variant="outline" onClick={() => setImageToDelete(null)}>
+            Annuler
+          </Button>
+          <Button
+            type="button"
+            variant="destructive"
+            onClick={handleDeleteExistingImage}
+            disabled={imageActionId === imageToDelete?.id}
+          >
+            {imageActionId === imageToDelete?.id ? "Suppression..." : "Supprimer"}
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+    </>
   );
 }

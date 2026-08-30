@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 import { useAuth } from "@/context/AuthContext";
 import { getAdminSettings, updateSettings } from "@/lib/api";
 import type { Settings } from "@/types/settings";
 import { cn } from "@/lib/utils";
 import {
+  Bell,
   Megaphone,
   Palette,
   Phone,
@@ -32,6 +34,7 @@ const TABS = [
   { id: "social", label: "Réseaux sociaux", icon: Share2 },
   { id: "commerce", label: "Commerce", icon: ShoppingBag },
   { id: "promotion", label: "Promotion", icon: Megaphone },
+  { id: "notifications", label: "Notifications", icon: Bell },
 ] as const;
 
 type TabId = (typeof TABS)[number]["id"];
@@ -50,6 +53,7 @@ export default function SettingsPage() {
     if (!token) return;
     getAdminSettings(token)
       .then(setSettings)
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, [token]);
 
@@ -92,6 +96,8 @@ export default function SettingsPage() {
     formData.append("bank_name", settings.bank_name || "");
     formData.append("bank_iban", settings.bank_iban || "");
     formData.append("bank_bic", settings.bank_bic || "");
+    formData.append("notify_new_orders", settings.notify_new_orders ? "1" : "0");
+    formData.append("notification_email", settings.notification_email || "");
     if (logo) formData.append("logo", logo);
 
     try {
@@ -433,6 +439,49 @@ export default function SettingsPage() {
               <p className="text-xs text-muted-foreground">
                 Affiche un compte à rebours sur la page d&apos;accueil de la
                 boutique. Laisser vide pour le masquer.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className={activeTab === "notifications" ? "" : "hidden"}>
+          <CardContent className="p-6 space-y-4">
+            <div>
+              <h3 className="text-sm font-semibold text-foreground">
+                Alertes de nouvelle commande
+              </h3>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Recevez un e-mail à chaque commande passée sur la boutique, en
+                plus de la notification dans le panneau d&apos;administration
+                (icône cloche).
+              </p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Switch
+                id="notify_new_orders"
+                checked={settings.notify_new_orders}
+                onCheckedChange={(checked) => update("notify_new_orders", checked)}
+              />
+              <Label htmlFor="notify_new_orders">
+                Envoyer un e-mail à chaque nouvelle commande
+              </Label>
+            </div>
+
+            <div className="space-y-2 max-w-sm">
+              <Label htmlFor="notification_email">E-mail de notification</Label>
+              <Input
+                id="notification_email"
+                type="email"
+                value={settings.notification_email || ""}
+                onChange={(e) => update("notification_email", e.target.value)}
+                placeholder={settings.contact_email || "commandes@bloomshop.test"}
+                disabled={!settings.notify_new_orders}
+              />
+              <p className="text-xs text-muted-foreground">
+                Laisser vide pour utiliser l&apos;e-mail de contact renseigné
+                dans l&apos;onglet Contact ({settings.contact_email || "non défini"}
+                ).
               </p>
             </div>
           </CardContent>

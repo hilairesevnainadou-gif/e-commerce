@@ -26,6 +26,7 @@ export default function CategoriesPage() {
     setLoading(true);
     getCategories()
       .then(setCategories)
+      .catch(() => {})
       .finally(() => setLoading(false));
   };
 

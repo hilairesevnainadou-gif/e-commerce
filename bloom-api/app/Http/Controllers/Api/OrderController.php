@@ -4,15 +4,19 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\OrderResource;
+use App\Mail\NewOrderAlert;
 use App\Mail\OrderConfirmation;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Setting;
+use App\Models\User;
+use App\Notifications\NewOrderPlaced;
 use App\Support\Eurozone;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Notification;
 
 class OrderController extends Controller
 {
@@ -95,7 +99,46 @@ class OrderController extends Controller
             ]);
         }
 
+        $this->notifyAdmins($order, $settings);
+
         return new OrderResource($order);
+    }
+
+    /**
+     * Alert admins of the new order: an in-app notification for everyone
+     * with the admin role, plus an email to the configured notification
+     * address (falling back to the general contact address) when enabled.
+     */
+    private function notifyAdmins(Order $order, Setting $settings): void
+    {
+        try {
+            $admins = User::where('role', 'admin')->get();
+            Notification::send($admins, new NewOrderPlaced($order));
+        } catch (\Throwable $e) {
+            Log::error('Failed to create new-order admin notification', [
+                'order_id' => $order->id,
+                'error' => $e->getMessage(),
+            ]);
+        }
+
+        if (! $settings->notify_new_orders) {
+            return;
+        }
+
+        $recipient = $settings->notification_email ?: $settings->contact_email;
+
+        if (! $recipient) {
+            return;
+        }
+
+        try {
+            Mail::to($recipient)->send(new NewOrderAlert($order));
+        } catch (\Throwable $e) {
+            Log::error('Failed to send new-order alert email', [
+                'order_id' => $order->id,
+                'error' => $e->getMessage(),
+            ]);
+        }
     }
 
     public function show(Request $request, Order $order)
