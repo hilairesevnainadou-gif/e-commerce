@@ -1,0 +1,8 @@
+{
+    "inter": {
+        "normal": "C:\\xampp\\htdocs\\bloom-api\\storage\\fonts\/inter_normal_61ce7b4cafc922bbd7fe4ea73f2a2f0f",
+        "500": "C:\\xampp\\htdocs\\bloom-api\\storage\\fonts\/inter_500_7105334a8646e4b2a03ff69eee7275c0",
+        "600": "C:\\xampp\\htdocs\\bloom-api\\storage\\fonts\/inter_600_d2b5b92c45d9e4b4e5de73f0ec3e3855",
+        "bold": "inter_bold_b6bf7c8442827792ed73574236ce3fba"
+    }
+}

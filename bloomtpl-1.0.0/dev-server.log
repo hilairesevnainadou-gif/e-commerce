@@ -1,0 +1,1245 @@
+
+> bloom-ecommerce-template@0.1.0 dev
+> next dev
+
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   ▲ Next.js 16.0.9 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://10.243.3.97:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 41.9s
+ ○ Compiling / ...
+ GET /returns 200 in 2.6s (compile: 1357ms, render: 1287ms)
+ GET / 200 in 1119ms (compile: 9ms, render: 1110ms)
+ GET / 200 in 5.2s (compile: 17ms, render: 5.1s)
+ ✓ Compiled in 1133ms
+ GET / 200 in 334ms (compile: 29ms, render: 305ms)
+ GET /shop 200 in 3.0s (compile: 1487ms, render: 1531ms)
+ GET /returns 200 in 1225ms (compile: 453ms, render: 772ms)
+ GET /returns 200 in 1467ms (compile: 13ms, render: 1454ms)
+ GET /returns 200 in 1055ms (compile: 23ms, render: 1032ms)
+ GET /returns 200 in 1809ms (compile: 20ms, render: 1789ms)
+ GET /returns 200 in 1080ms (compile: 22ms, render: 1058ms)
+ GET /returns 200 in 1309ms (compile: 26ms, render: 1283ms)
+ GET /returns 200 in 64ms (compile: 11ms, render: 53ms)
+ GET /returns 200 in 943ms (compile: 9ms, render: 933ms)
+ GET /shipping 200 in 1863ms (compile: 1131ms, render: 731ms)
+ GET /shipping 200 in 1057ms (compile: 595ms, render: 462ms)
+ GET /shipping 200 in 540ms (compile: 11ms, render: 529ms)
+ GET /shipping 200 in 674ms (compile: 10ms, render: 665ms)
+ GET /shipping 200 in 656ms (compile: 9ms, render: 647ms)
+ GET /shipping 200 in 1690ms (compile: 25ms, render: 1665ms)
+ GET /shipping 200 in 1023ms (compile: 14ms, render: 1009ms)
+ GET / 200 in 2.4s (compile: 11ms, render: 2.4s)
+ GET / 200 in 1916ms (compile: 14ms, render: 1902ms)
+ ✓ Compiled in 320ms
+ GET / 200 in 471ms (compile: 16ms, render: 455ms)
+ GET / 200 in 268ms (compile: 127ms, render: 141ms)
+ GET /product/airflex-runner 200 in 4.0s (compile: 2.4s, render: 1579ms)
+ ✓ Compiled in 340ms
+ GET /product/airflex-runner 200 in 183ms (compile: 32ms, render: 151ms)
+ GET /cart 200 in 2.8s (compile: 1949ms, render: 825ms)
+ GET /cart 200 in 482ms (compile: 16ms, render: 466ms)
+ GET / 200 in 2.9s (compile: 12ms, render: 2.9s)
+ ✓ Compiled in 616ms
+ GET /cart 200 in 866ms (compile: 280ms, render: 586ms)
+ GET /cart 200 in 1459ms (compile: 31ms, render: 1427ms)
+ GET /checkout 404 in 2.3s (compile: 1352ms, render: 903ms)
+ GET /checkout 404 in 1234ms (compile: 306ms, render: 927ms)
+ GET /cart 200 in 1208ms (compile: 38ms, render: 1171ms)
+ GET /returns 200 in 2.3s (compile: 943ms, render: 1332ms)
+ GET /shipping 200 in 1640ms (compile: 511ms, render: 1129ms)
+ GET /shipping 200 in 1176ms (compile: 14ms, render: 1162ms)
+ GET /returns 200 in 738ms (compile: 15ms, render: 722ms)
+ GET /help 200 in 1917ms (compile: 1186ms, render: 731ms)
+ GET /help 200 in 519ms (compile: 17ms, render: 502ms)
+ GET /help 200 in 322ms (compile: 9ms, render: 312ms)
+ GET /shipping 200 in 1038ms (compile: 16ms, render: 1022ms)
+ GET /returns 200 in 954ms (compile: 9ms, render: 945ms)
+ GET /help 200 in 954ms (compile: 12ms, render: 941ms)
+ GET /help 200 in 349ms (compile: 9ms, render: 340ms)
+ GET /contact 200 in 1202ms (compile: 638ms, render: 564ms)
+ GET /shipping 200 in 750ms (compile: 12ms, render: 738ms)
+ GET /shipping 200 in 827ms (compile: 11ms, render: 816ms)
+ GET /shipping 200 in 1105ms (compile: 14ms, render: 1091ms)
+ GET /help 200 in 626ms (compile: 12ms, render: 614ms)
+ GET /about 200 in 1183ms (compile: 683ms, render: 500ms)
+ ✓ Compiled in 290ms
+ GET /about 200 in 167ms (compile: 15ms, render: 153ms)
+ ✓ Compiled in 170ms
+ GET /about 200 in 123ms (compile: 29ms, render: 94ms)
+ GET /shipping 200 in 1609ms (compile: 184ms, render: 1425ms)
+ GET /contact 200 in 755ms (compile: 18ms, render: 738ms)
+ ✓ Compiled in 178ms
+ GET /contact 200 in 150ms (compile: 30ms, render: 120ms)
+ GET /returns 200 in 1112ms (compile: 241ms, render: 871ms)
+ GET /help 200 in 952ms (compile: 149ms, render: 804ms)
+ GET /returns 200 in 443ms (compile: 9ms, render: 434ms)
+ GET /shipping 200 in 384ms (compile: 10ms, render: 374ms)
+ GET /shipping 200 in 494ms (compile: 9ms, render: 486ms)
+ GET /returns 200 in 437ms (compile: 8ms, render: 429ms)
+ GET /help 200 in 398ms (compile: 8ms, render: 390ms)
+ GET /shipping 200 in 1188ms (compile: 28ms, render: 1160ms)
+ GET / 200 in 2.4s (compile: 11ms, render: 2.4s)
+ GET /shipping 200 in 1318ms (compile: 14ms, render: 1304ms)
+ GET /returns 200 in 1322ms (compile: 12ms, render: 1310ms)
+ GET /contact 200 in 1263ms (compile: 13ms, render: 1251ms)
+ GET /cart 200 in 783ms (compile: 10ms, render: 772ms)
+ GET /help 200 in 1595ms (compile: 22ms, render: 1573ms)
+ GET / 200 in 2.9s (compile: 13ms, render: 2.9s)
+ GET / 200 in 1926ms (compile: 12ms, render: 1914ms)
+ ✓ Compiled in 166ms
+ ✓ Compiled in 493ms
+ ✓ Compiled in 391ms
+ GET / 200 in 130ms (compile: 13ms, render: 117ms)
+ ✓ Compiled in 110ms
+ GET /contact 200 in 1017ms (compile: 275ms, render: 742ms)
+ GET /contact 200 in 763ms (compile: 18ms, render: 745ms)
+ GET /contact 200 in 656ms (compile: 8ms, render: 647ms)
+ GET /help 200 in 517ms (compile: 8ms, render: 509ms)
+ GET /contact 200 in 728ms (compile: 11ms, render: 717ms)
+ ✓ Compiled in 225ms
+ GET /contact 200 in 360ms (compile: 194ms, render: 166ms)
+ GET /contact 200 in 76ms (compile: 13ms, render: 63ms)
+ GET /contact 200 in 81ms (compile: 11ms, render: 70ms)
+ GET /contact 200 in 311ms (compile: 17ms, render: 294ms)
+ GET /contact 200 in 73ms (compile: 11ms, render: 62ms)
+ GET /contact 200 in 88ms (compile: 11ms, render: 77ms)
+ GET /contact 200 in 100ms (compile: 19ms, render: 80ms)
+ GET /contact 200 in 62ms (compile: 9ms, render: 53ms)
+ GET /contact 200 in 73ms (compile: 12ms, render: 61ms)
+ GET /contact 200 in 65ms (compile: 8ms, render: 57ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ ○ Compiling /_error ...
+ GET /contact 500 in 6.8s (compile: 6.5s, render: 302ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 123ms (compile: 94ms, render: 29ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 71ms (compile: 38ms, render: 33ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 56ms (compile: 36ms, render: 20ms)
+ ⨯ ./app/contact/page.tsx:181:1
+Parsing ecmascript source code failed
+[0m [90m 179 |[39m     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 180 |[39m   )[33m;[39m
+[31m[1m>[22m[39m[90m 181 |[39m }
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 182 |[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/contact/page.tsx [Client Component Browser]
+    ./app/contact/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/contact/page.tsx [Client Component SSR]
+    ./app/contact/page.tsx [Server Component]
+
+
+
+./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 136ms (compile: 108ms, render: 29ms)
+ ⨯ ./app/contact/page.tsx:181:1
+Parsing ecmascript source code failed
+[0m [90m 179 |[39m     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 180 |[39m   )[33m;[39m
+[31m[1m>[22m[39m[90m 181 |[39m }
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 182 |[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/contact/page.tsx [Client Component Browser]
+    ./app/contact/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/contact/page.tsx [Client Component SSR]
+    ./app/contact/page.tsx [Server Component]
+
+
+
+./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 129ms (compile: 70ms, render: 59ms)
+ ⨯ ./app/contact/page.tsx:181:1
+Parsing ecmascript source code failed
+[0m [90m 179 |[39m     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 180 |[39m   )[33m;[39m
+[31m[1m>[22m[39m[90m 181 |[39m }
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 182 |[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/contact/page.tsx [Client Component Browser]
+    ./app/contact/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/contact/page.tsx [Client Component SSR]
+    ./app/contact/page.tsx [Server Component]
+
+
+
+./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 74ms (compile: 40ms, render: 35ms)
+ ⨯ ./app/contact/page.tsx:181:1
+Parsing ecmascript source code failed
+[0m [90m 179 |[39m     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 180 |[39m   )[33m;[39m
+[31m[1m>[22m[39m[90m 181 |[39m }
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 182 |[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/contact/page.tsx [Client Component Browser]
+    ./app/contact/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/contact/page.tsx [Client Component SSR]
+    ./app/contact/page.tsx [Server Component]
+
+
+
+./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 63ms (compile: 38ms, render: 26ms)
+ ⨯ ./app/contact/page.tsx:181:1
+Parsing ecmascript source code failed
+[0m [90m 179 |[39m     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 180 |[39m   )[33m;[39m
+[31m[1m>[22m[39m[90m 181 |[39m }
+ [90m     |[39m [31m[1m^[22m[39m
+ [90m 182 |[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/contact/page.tsx [Client Component Browser]
+    ./app/contact/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/contact/page.tsx [Client Component SSR]
+    ./app/contact/page.tsx [Server Component]
+
+
+
+./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 68ms (compile: 41ms, render: 27ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 163ms (compile: 130ms, render: 33ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 54ms (compile: 30ms, render: 24ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 73ms (compile: 46ms, render: 27ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 61ms (compile: 35ms, render: 26ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 63ms (compile: 38ms, render: 26ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 57ms (compile: 31ms, render: 26ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 62ms (compile: 36ms, render: 26ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 60ms (compile: 37ms, render: 23ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 159ms (compile: 72ms, render: 87ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /help 500 in 80ms (compile: 46ms, render: 33ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET / 500 in 112ms (compile: 93ms, render: 19ms)
+ ⨯ ./app/layout.tsx:48:28
+Parsing ecmascript source code failed
+[0m [90m 46 |[39m             [33m<[39m[33mFooter[39m [33m/[39m[33m>[39m
+ [90m 47 |[39m             [33m<[39m[33mWhatsAppButton[39m [33m/[39m[33m>[39m
+[31m[1m>[22m[39m[90m 48 |[39m         [33m<[39m[33m/[39m[33mSettingsProvider[39m[33m>[39m
+ [90m    |[39m                            [31m[1m^[22m[39m
+[31m[1m>[22m[39m[90m 49 |[39m       [33m<[39m[33m/[39m[33mbody[39m[33m>[39m
+ [90m    |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 50 |[39m     [33m<[39m[33m/[39m[33mhtml[39m[33m>[39m
+ [90m 51 |[39m   )[33m;[39m
+ [90m 52 |[39m }[0m
+
+Expected '</', got 'jsx text (
+      )'
+
+
+ GET /contact 500 in 219ms (compile: 198ms, render: 21ms)
+ ✓ Compiled in 749ms
+ GET /help 200 in 4.3s (compile: 1147ms, render: 3.2s)
+ GET / 200 in 3.8s (compile: 254ms, render: 3.6s)
+ GET / 200 in 4.4s (compile: 17ms, render: 4.3s)
+ GET /contact 200 in 1106ms (compile: 351ms, render: 755ms)
+ GET / 200 in 1522ms (compile: 49ms, render: 1473ms)
+ GET /contact 200 in 350ms (compile: 10ms, render: 340ms)
+ GET / 200 in 1635ms (compile: 17ms, render: 1618ms)
+ GET / 200 in 1958ms (compile: 15ms, render: 1943ms)
+ GET / 200 in 1204ms (compile: 14ms, render: 1190ms)
+ ✓ Compiled in 410ms
+ GET /help 200 in 1808ms (compile: 913ms, render: 895ms)
+ GET /contact 200 in 1038ms (compile: 329ms, render: 709ms)
+ GET /contact 200 in 1063ms (compile: 15ms, render: 1048ms)
+ GET /contact 200 in 1393ms (compile: 17ms, render: 1377ms)
+ ✓ Compiled in 739ms
+ GET /contact 200 in 1190ms (compile: 880ms, render: 310ms)
+ GET /contact 200 in 401ms (compile: 237ms, render: 164ms)
+ GET /contact 200 in 184ms (compile: 67ms, render: 117ms)
+ GET /contact 200 in 104ms (compile: 16ms, render: 88ms)
+ GET /contact 200 in 127ms (compile: 24ms, render: 103ms)
+ GET /contact 200 in 126ms (compile: 17ms, render: 109ms)
+ GET /contact 200 in 237ms (compile: 26ms, render: 210ms)
+ GET /contact 200 in 112ms (compile: 15ms, render: 96ms)
+ GET /contact 200 in 115ms (compile: 17ms, render: 97ms)
+ GET /contact 200 in 102ms (compile: 17ms, render: 85ms)
+ GET /contact 200 in 108ms (compile: 22ms, render: 86ms)
+ GET /contact 200 in 100ms (compile: 15ms, render: 85ms)
+ GET /contact 200 in 95ms (compile: 15ms, render: 79ms)
+ GET /contact 200 in 113ms (compile: 16ms, render: 97ms)
+ GET /contact 200 in 83ms (compile: 19ms, render: 64ms)
+ GET /contact 200 in 76ms (compile: 15ms, render: 61ms)
+ GET /contact 200 in 78ms (compile: 12ms, render: 66ms)
+ GET /contact 200 in 80ms (compile: 14ms, render: 66ms)
+ GET /contact 200 in 111ms (compile: 14ms, render: 96ms)
+ GET /contact 200 in 105ms (compile: 17ms, render: 88ms)
+ GET /contact 200 in 87ms (compile: 13ms, render: 74ms)
+ GET /contact 200 in 81ms (compile: 12ms, render: 69ms)
+ GET /contact 200 in 62ms (compile: 13ms, render: 49ms)
+ GET /contact 200 in 69ms (compile: 12ms, render: 58ms)
+ GET /contact 200 in 78ms (compile: 13ms, render: 65ms)
+ GET /contact 200 in 81ms (compile: 14ms, render: 67ms)
+ GET /contact 200 in 79ms (compile: 11ms, render: 68ms)
+ GET /contact 200 in 70ms (compile: 12ms, render: 58ms)
+ GET /contact 200 in 64ms (compile: 12ms, render: 51ms)
+ GET /contact 200 in 76ms (compile: 14ms, render: 62ms)
+ GET /contact 200 in 70ms (compile: 12ms, render: 59ms)
+ GET /contact 200 in 80ms (compile: 12ms, render: 68ms)
+ GET /contact 200 in 80ms (compile: 18ms, render: 62ms)
+ GET /contact 200 in 69ms (compile: 13ms, render: 56ms)
+ GET /contact 200 in 73ms (compile: 11ms, render: 63ms)
+ GET /contact 200 in 85ms (compile: 19ms, render: 66ms)
+ GET /contact 200 in 73ms (compile: 13ms, render: 60ms)
+ GET /contact 200 in 79ms (compile: 12ms, render: 67ms)
+ GET /contact 200 in 126ms (compile: 11ms, render: 115ms)
+ GET /contact 200 in 148ms (compile: 64ms, render: 85ms)
+ GET /contact 200 in 118ms (compile: 18ms, render: 100ms)
+ GET /contact 200 in 80ms (compile: 16ms, render: 64ms)
+ GET /contact 200 in 572ms (compile: 13ms, render: 559ms)
+ GET /privacy 200 in 2.0s (compile: 1083ms, render: 951ms)
+ GET /terms 200 in 1594ms (compile: 879ms, render: 714ms)
+ GET /cookies 200 in 1925ms (compile: 1135ms, render: 790ms)
+ GET /accessibility 200 in 1626ms (compile: 957ms, render: 669ms)
+ ✓ Compiled in 946ms
+ GET /accessibility 200 in 2.1s (compile: 986ms, render: 1089ms)
+ GET /accessibility 200 in 649ms (compile: 510ms, render: 139ms)
+ GET /accessibility 200 in 172ms (compile: 16ms, render: 156ms)
+ GET /accessibility 200 in 357ms (compile: 24ms, render: 333ms)
+ GET /accessibility 200 in 359ms (compile: 62ms, render: 297ms)
+ GET /accessibility 200 in 167ms (compile: 25ms, render: 142ms)
+ GET /accessibility 200 in 202ms (compile: 36ms, render: 166ms)
+ GET /accessibility 200 in 129ms (compile: 23ms, render: 107ms)
+ GET /accessibility 200 in 795ms (compile: 14ms, render: 781ms)
+ GET /accessibility 200 in 476ms (compile: 23ms, render: 452ms)
+ GET /press 200 in 857ms (compile: 41ms, render: 816ms)
+ GET /accessibility 200 in 846ms (compile: 187ms, render: 659ms)
+ GET /press 200 in 2.8s (compile: 1653ms, render: 1100ms)
+ GET /press 200 in 517ms (compile: 18ms, render: 498ms)
+ GET /accessibility 200 in 327ms (compile: 84ms, render: 242ms)
+ GET /press 200 in 612ms (compile: 30ms, render: 582ms)
+ GET /accessibility 200 in 605ms (compile: 234ms, render: 371ms)
+ GET /accessibility 200 in 242ms (compile: 26ms, render: 216ms)
+ GET /press 200 in 237ms (compile: 131ms, render: 105ms)
+ GET /accessibility 200 in 716ms (compile: 14ms, render: 702ms)
+ GET /press 200 in 728ms (compile: 88ms, render: 640ms)
+ GET /press 200 in 643ms (compile: 13ms, render: 630ms)
+ GET /accessibility 200 in 552ms (compile: 168ms, render: 384ms)
+ GET /accessibility 200 in 486ms (compile: 60ms, render: 426ms)
+ GET /press 200 in 499ms (compile: 222ms, render: 278ms)
+ GET /accessibility 200 in 358ms (compile: 16ms, render: 342ms)
+ GET /press 200 in 269ms (compile: 15ms, render: 253ms)
+ GET /press 200 in 172ms (compile: 102ms, render: 70ms)
+ GET /accessibility 200 in 176ms (compile: 16ms, render: 160ms)
+ GET /press 200 in 367ms (compile: 198ms, render: 168ms)
+ GET /accessibility 200 in 87ms (compile: 12ms, render: 75ms)
+ GET /accessibility 200 in 143ms (compile: 75ms, render: 68ms)
+ GET /press 200 in 146ms (compile: 14ms, render: 132ms)
+ GET /press 200 in 663ms (compile: 17ms, render: 646ms)
+ GET /press 200 in 528ms (compile: 19ms, render: 510ms)
+ GET /press 200 in 425ms (compile: 38ms, render: 387ms)
+ GET /press 200 in 898ms (compile: 54ms, render: 843ms)
+ GET /press 200 in 534ms (compile: 230ms, render: 304ms)
+ GET /press 200 in 452ms (compile: 21ms, render: 431ms)
+ GET /help 200 in 1782ms (compile: 179ms, render: 1603ms)
+ GET /press 200 in 465ms (compile: 15ms, render: 450ms)
+ GET /help 200 in 2.7s (compile: 456ms, render: 2.3s)
+ GET /press 200 in 448ms (compile: 17ms, render: 431ms)
+ GET /help 200 in 1711ms (compile: 34ms, render: 1677ms)
+ GET /press 200 in 523ms (compile: 20ms, render: 503ms)
+ GET /press 200 in 521ms (compile: 18ms, render: 503ms)
+ GET /help 200 in 1302ms (compile: 19ms, render: 1283ms)
+ GET /press 200 in 115ms (compile: 21ms, render: 94ms)
+ GET /help 200 in 848ms (compile: 14ms, render: 834ms)
+ GET /help 200 in 380ms (compile: 23ms, render: 357ms)
+ GET /about 200 in 1889ms (compile: 811ms, render: 1078ms)
+ GET /about 200 in 1385ms (compile: 15ms, render: 1370ms)
+ GET /accessibility 200 in 595ms (compile: 11ms, render: 583ms)
+ GET /returns 200 in 1561ms (compile: 692ms, render: 869ms)
+ ✓ Compiled in 283ms
+ GET /payment-methods 200 in 2.4s (compile: 899ms, render: 1471ms)
+ ✓ Compiled in 138ms
+ GET /legal-notice 200 in 1440ms (compile: 696ms, render: 744ms)
+ GET /payment-methods 200 in 1088ms (compile: 184ms, render: 905ms)
+ GET / 200 in 2.1s (compile: 351ms, render: 1741ms)
+ GET /legal-notice 200 in 982ms (compile: 11ms, render: 971ms)
+ GET /legal-notice 200 in 1331ms (compile: 16ms, render: 1315ms)
+ GET /payment-methods 200 in 787ms (compile: 12ms, render: 775ms)
+ GET /privacy 200 in 2.9s (compile: 657ms, render: 2.3s)
+ GET / 200 in 3.8s (compile: 42ms, render: 3.7s)
+ GET /legal-notice 200 in 900ms (compile: 15ms, render: 885ms)
+ GET /contact 200 in 730ms (compile: 160ms, render: 570ms)
+ GET /careers 200 in 1866ms (compile: 999ms, render: 868ms)
+ GET /help 200 in 1241ms (compile: 321ms, render: 920ms)
+ GET /press 200 in 1028ms (compile: 267ms, render: 761ms)
+ GET /legal-notice 200 in 906ms (compile: 10ms, render: 896ms)
+ GET /legal-notice 200 in 586ms (compile: 21ms, render: 565ms)
+ GET /accessibility 200 in 908ms (compile: 239ms, render: 668ms)
+ GET /payment-methods 200 in 683ms (compile: 10ms, render: 673ms)
+ GET / 200 in 2.4s (compile: 21ms, render: 2.4s)
+ GET /shipping 200 in 1276ms (compile: 531ms, render: 744ms)
+ GET /cookies 200 in 869ms (compile: 164ms, render: 706ms)
+ GET /legal-notice 200 in 484ms (compile: 12ms, render: 472ms)
+ GET /privacy 200 in 399ms (compile: 11ms, render: 388ms)
+ GET /terms 200 in 899ms (compile: 182ms, render: 717ms)
+ GET /cookies 200 in 537ms (compile: 9ms, render: 528ms)
+ GET /about 200 in 842ms (compile: 253ms, render: 589ms)
+ GET /careers 200 in 546ms (compile: 12ms, render: 534ms)
+ GET / 200 in 2.2s (compile: 11ms, render: 2.2s)
+ GET / 200 in 1504ms (compile: 13ms, render: 1492ms)
+ GET / 200 in 2.1s (compile: 16ms, render: 2.1s)
+ ✓ Compiled in 620ms
+ GET / 200 in 244ms (compile: 18ms, render: 226ms)
+ ✓ Compiled in 341ms
+ GET / 200 in 390ms (compile: 20ms, render: 370ms)
+ GET /shop?new=1 200 in 3.0s (compile: 1116ms, render: 1923ms)
+ GET /payment-methods 200 in 1091ms (compile: 344ms, render: 747ms)
+ GET /legal-notice 200 in 782ms (compile: 188ms, render: 594ms)
+ GET /payment-methods 200 in 717ms (compile: 19ms, render: 698ms)
+ GET /legal-notice 200 in 493ms (compile: 18ms, render: 474ms)
+ GET /legal-notice 200 in 572ms (compile: 11ms, render: 561ms)
+ GET /legal-notice 200 in 516ms (compile: 12ms, render: 504ms)
+ GET /privacy 200 in 564ms (compile: 23ms, render: 540ms)
+ GET /terms 200 in 589ms (compile: 24ms, render: 565ms)
+ GET /cookies 200 in 594ms (compile: 26ms, render: 569ms)
+ GET /accessibility 200 in 540ms (compile: 24ms, render: 515ms)
+ GET /about 200 in 595ms (compile: 19ms, render: 576ms)
+ GET /privacy 200 in 444ms (compile: 10ms, render: 434ms)
+ GET /privacy 200 in 350ms (compile: 10ms, render: 340ms)
+ GET /accessibility 200 in 507ms (compile: 14ms, render: 493ms)
+ GET /legal-notice 200 in 561ms (compile: 12ms, render: 549ms)
+ GET /privacy 200 in 420ms (compile: 10ms, render: 410ms)
+ GET /contact 200 in 550ms (compile: 19ms, render: 532ms)
+ GET /privacy 200 in 726ms (compile: 11ms, render: 715ms)
+ GET /terms 200 in 375ms (compile: 11ms, render: 364ms)
+ GET / 200 in 2.2s (compile: 10ms, render: 2.2s)
+ GET /help 200 in 525ms (compile: 19ms, render: 506ms)
+ GET /contact 200 in 596ms (compile: 11ms, render: 585ms)
+ GET /help 200 in 645ms (compile: 10ms, render: 636ms)
+ GET /shipping 200 in 583ms (compile: 17ms, render: 566ms)
+ GET /returns 200 in 1466ms (compile: 280ms, render: 1186ms)
+ GET /legal-notice 200 in 487ms (compile: 10ms, render: 477ms)
+ GET /privacy 200 in 423ms (compile: 10ms, render: 413ms)
+ GET /terms 200 in 513ms (compile: 11ms, render: 501ms)
+ GET /terms 200 in 222ms (compile: 16ms, render: 206ms)
+ ✓ Compiled in 332ms
+ ✓ Compiled in 405ms
+ GET /terms 200 in 1013ms (compile: 493ms, render: 520ms)
+ ✓ Compiled in 303ms
+ GET /terms 200 in 140ms (compile: 40ms, render: 99ms)
+ GET /terms 200 in 320ms (compile: 10ms, render: 310ms)
+ ✓ Compiled in 349ms
+ GET /terms 200 in 899ms (compile: 11ms, render: 887ms)
+ GET /privacy 200 in 1433ms (compile: 644ms, render: 789ms)
+ GET /privacy 200 in 729ms (compile: 9ms, render: 720ms)
+ GET /terms 200 in 471ms (compile: 9ms, render: 462ms)
+ GET /cookies 200 in 925ms (compile: 189ms, render: 736ms)
+ GET /accessibility 200 in 906ms (compile: 232ms, render: 674ms)
+ GET /cookies 200 in 521ms (compile: 10ms, render: 511ms)
+ GET /privacy 200 in 650ms (compile: 15ms, render: 635ms)
+ GET /terms 200 in 742ms (compile: 11ms, render: 731ms)
+ GET /cookies 200 in 700ms (compile: 15ms, render: 685ms)
+ GET /accessibility 200 in 586ms (compile: 11ms, render: 575ms)
+ GET /accessibility 200 in 488ms (compile: 11ms, render: 477ms)
+ GET /legal-notice 200 in 532ms (compile: 10ms, render: 522ms)
+ GET /shop 200 in 840ms (compile: 18ms, render: 822ms)
+ GET /privacy 200 in 411ms (compile: 10ms, render: 401ms)
+ GET /about 200 in 372ms (compile: 11ms, render: 361ms)
+ GET /about 200 in 546ms (compile: 344ms, render: 202ms)
+ GET /about 200 in 1113ms (compile: 14ms, render: 1099ms)
+ GET /about 200 in 725ms (compile: 10ms, render: 714ms)
+ GET /about 200 in 569ms (compile: 238ms, render: 331ms)
+ GET /about 200 in 351ms (compile: 172ms, render: 179ms)
+ GET /about 200 in 580ms (compile: 401ms, render: 179ms)
+ GET /about 200 in 334ms (compile: 178ms, render: 155ms)
+ GET /about 200 in 303ms (compile: 169ms, render: 134ms)
+ GET /about 200 in 538ms (compile: 10ms, render: 528ms)
+ GET /about 200 in 739ms (compile: 8ms, render: 730ms)
+ GET /about 200 in 1521ms (compile: 19ms, render: 1502ms)
+ ✓ Compiled in 251ms
+ GET /about 200 in 391ms (compile: 195ms, render: 196ms)
+ GET /about 200 in 1325ms (compile: 13ms, render: 1312ms)
+ GET /about 200 in 1065ms (compile: 15ms, render: 1050ms)
+ GET /accessibility 200 in 437ms (compile: 20ms, render: 417ms)
+ GET /cookies 200 in 503ms (compile: 19ms, render: 483ms)
+ GET /privacy 200 in 478ms (compile: 17ms, render: 461ms)
+ GET /about 200 in 529ms (compile: 13ms, render: 516ms)
+ GET /shop 200 in 1208ms (compile: 17ms, render: 1190ms)
+ GET /accessibility 200 in 578ms (compile: 10ms, render: 568ms)
+ GET /cart 200 in 1312ms (compile: 483ms, render: 829ms)
+ GET /cart 200 in 94ms (compile: 12ms, render: 82ms)
+ ✓ Compiled in 317ms
+ GET /cart 200 in 370ms (compile: 30ms, render: 340ms)
+ GET /cart 200 in 332ms (compile: 10ms, render: 322ms)
+ GET /accessibility 200 in 1280ms (compile: 189ms, render: 1091ms)
+ GET /accessibility 200 in 1005ms (compile: 14ms, render: 990ms)
+ GET /accessibility 200 in 1139ms (compile: 15ms, render: 1124ms)
+ GET /accessibility 200 in 1399ms (compile: 15ms, render: 1384ms)
+ GET /shipping 200 in 456ms (compile: 19ms, render: 438ms)
+ GET /shop 200 in 770ms (compile: 13ms, render: 757ms)
+ GET /shop 200 in 1160ms (compile: 15ms, render: 1145ms)
+ GET /cart 200 in 545ms (compile: 10ms, render: 535ms)
+ GET / 200 in 2.0s (compile: 152ms, render: 1883ms)
+ ✓ Compiled in 229ms
+ GET / 200 in 3.2s (compile: 236ms, render: 2.9s)
+ GET /shop 200 in 1538ms (compile: 13ms, render: 1525ms)
+ GET /product/airflex-runner 200 in 4.4s (compile: 895ms, render: 3.5s)
+ ✓ Compiled in 739ms
+ ⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 200 in 653ms (compile: 289ms, render: 363ms)
+ GET / 200 in 107ms (compile: 14ms, render: 93ms)
+ GET / 200 in 174ms (compile: 19ms, render: 155ms)
+ GET / 200 in 90ms (compile: 14ms, render: 76ms)
+ GET / 200 in 180ms (compile: 14ms, render: 166ms)
+ GET / 200 in 158ms (compile: 9ms, render: 149ms)
+ GET / 200 in 199ms (compile: 11ms, render: 188ms)
+ GET / 200 in 138ms (compile: 13ms, render: 124ms)
+ GET / 200 in 83ms (compile: 13ms, render: 70ms)
+ GET / 200 in 85ms (compile: 10ms, render: 75ms)
+ GET / 200 in 206ms (compile: 14ms, render: 192ms)
+ GET / 200 in 101ms (compile: 10ms, render: 90ms)
+ GET / 200 in 78ms (compile: 12ms, render: 66ms)
+ GET / 200 in 90ms (compile: 11ms, render: 79ms)
+ GET / 200 in 159ms (compile: 11ms, render: 148ms)
+ GET / 200 in 1964ms (compile: 11ms, render: 1953ms)
+ ✓ Compiled in 179ms
+ GET /track-order 200 in 1471ms (compile: 815ms, render: 656ms)
+ GET / 200 in 1904ms (compile: 158ms, render: 1746ms)
+ GET /track-order 200 in 470ms (compile: 12ms, render: 458ms)
+ GET /track-order 200 in 735ms (compile: 13ms, render: 722ms)
+ GET / 200 in 1174ms (compile: 12ms, render: 1161ms)
+ GET /careers 200 in 732ms (compile: 242ms, render: 490ms)
+ GET /track-order 200 in 633ms (compile: 13ms, render: 621ms)
+ GET /careers 200 in 590ms (compile: 12ms, render: 578ms)
+ GET /shop 200 in 1204ms (compile: 279ms, render: 925ms)
+ ✓ Compiled in 147ms
+ GET /shop 200 in 116ms (compile: 11ms, render: 105ms)
+ GET /contact 200 in 754ms (compile: 176ms, render: 578ms)
+ GET /contact 200 in 166ms (compile: 12ms, render: 154ms)
+ ✓ Compiled in 429ms
+ GET /track-order 200 in 2.1s (compile: 278ms, render: 1833ms)
+ GET /careers 200 in 2.3s (compile: 396ms, render: 1881ms)
+ GET /track-order 200 in 777ms (compile: 12ms, render: 764ms)
+ GET /careers 200 in 698ms (compile: 12ms, render: 686ms)
+ GET /cart 200 in 718ms (compile: 159ms, render: 559ms)
+ GET /contact 200 in 455ms (compile: 9ms, render: 445ms)
+ GET /careers 200 in 559ms (compile: 10ms, render: 549ms)
+ GET /track-order 200 in 490ms (compile: 9ms, render: 481ms)
+ GET /contact 200 in 484ms (compile: 10ms, render: 474ms)
+ GET /shop 200 in 651ms (compile: 10ms, render: 641ms)
+ GET /shop 200 in 1870ms (compile: 20ms, render: 1850ms)
+ GET /shop 200 in 2.4s (compile: 15ms, render: 2.4s)
+ GET /shop 200 in 2.3s (compile: 26ms, render: 2.3s)
+ GET /shop 200 in 2.2s (compile: 19ms, render: 2.2s)
+ ✓ Compiled in 269ms
+ ✓ Compiled in 1267ms
+ GET /shop 200 in 2.8s (compile: 684ms, render: 2.1s)
+ GET /shop 200 in 1620ms (compile: 8ms, render: 1613ms)
+ GET /shop?on_sale=1 200 in 1349ms (compile: 10ms, render: 1339ms)
+ GET /shop?category=vetements-femme 200 in 1432ms (compile: 8ms, render: 1424ms)
+ GET /shop 200 in 1915ms (compile: 15ms, render: 1900ms)
+ GET /shop?on_sale=1 200 in 1420ms (compile: 16ms, render: 1404ms)
+ GET /shop 200 in 2.1s (compile: 18ms, render: 2.1s)
+ GET /shop?category=vetements-femme 200 in 2.9s (compile: 15ms, render: 2.9s)
+ GET /shop?category=vetements-femme&min_price=50&max_price=100 200 in 2.2s (compile: 22ms, render: 2.1s)
+ GET /shop?category=accessoires 200 in 1942ms (compile: 14ms, render: 1928ms)
+ GET /product/sac-a-dos-urbain 200 in 2.8s (compile: 267ms, render: 2.5s)
+ GET /shop?category=sneakers 200 in 2.7s (compile: 14ms, render: 2.7s)
+ GET /shop?category=vetements-femme 200 in 3.5s (compile: 14ms, render: 3.5s)
+ GET /shop?category=vetements-homme 200 in 2.3s (compile: 82ms, render: 2.2s)
+ GET /product/t-shirt-col-rond-basique 200 in 2.4s (compile: 19ms, render: 2.4s)
+ GET /shop 200 in 1967ms (compile: 13ms, render: 1954ms)
+ GET /shop 200 in 1779ms (compile: 19ms, render: 1760ms)
+ GET /shop 200 in 2.6s (compile: 18ms, render: 2.6s)
+ GET /shop?category=vetements-femme 200 in 1864ms (compile: 23ms, render: 1841ms)
+ GET /shop?category=vetements-femme&min_price=50&max_price=100 200 in 1952ms (compile: 23ms, render: 1929ms)
+ GET /shop 200 in 2.0s (compile: 15ms, render: 1996ms)
+ GET / 200 in 3.0s (compile: 12ms, render: 2.9s)
+ GET /product/montre-classique-cuir 200 in 2.9s (compile: 24ms, render: 2.9s)
+ GET / 200 in 3.3s (compile: 12ms, render: 3.3s)
+ GET /product/nova-horizon 200 in 2.9s (compile: 24ms, render: 2.8s)
+ GET / 200 in 2.7s (compile: 12ms, render: 2.7s)
+ GET /shop 200 in 1669ms (compile: 10ms, render: 1659ms)
+ GET /shop?new=1 200 in 1834ms (compile: 14ms, render: 1820ms)
+ GET /shop?on_sale=1 200 in 2.6s (compile: 9ms, render: 2.6s)
+ GET /shop?new=1 200 in 1673ms (compile: 8ms, render: 1665ms)
+ GET /shop?new=1 200 in 1691ms (compile: 14ms, render: 1677ms)
+ GET /shop?new=1 200 in 2.9s (compile: 24ms, render: 2.9s)
+ GET /shop 200 in 1980ms (compile: 10ms, render: 1971ms)
+ GET /shop 200 in 7.8s (compile: 14ms, render: 7.8s)
+ GET /shop 200 in 129ms (compile: 16ms, render: 113ms)
+ GET /shop 200 in 4.3s (compile: 12ms, render: 4.3s)
+ GET /shop 200 in 2.6s (compile: 26ms, render: 2.5s)
+ GET /shop 200 in 2.9s (compile: 37ms, render: 2.8s)
+ GET /shop?category=sneakers 200 in 2.8s (compile: 18ms, render: 2.8s)
+ GET /shop 200 in 4.5s (compile: 23ms, render: 4.5s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=accessoires 200 in 2.6s (compile: 11ms, render: 2.6s)
+ GET /shop?category=sneakers 200 in 2.8s (compile: 11ms, render: 2.8s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=vetements-femme 200 in 2.3s (compile: 11ms, render: 2.3s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=vetements-femme 200 in 2.8s (compile: 30ms, render: 2.8s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop 200 in 2.5s (compile: 13ms, render: 2.5s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611923134239-b9be5816e3b4?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=accessoires 200 in 1782ms (compile: 16ms, render: 1766ms)
+ GET /shop?category=sneakers 200 in 1862ms (compile: 15ms, render: 1847ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=vetements-femme 200 in 2.5s (compile: 11ms, render: 2.5s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=vetements-homme 200 in 2.3s (compile: 10ms, render: 2.3s)
+ GET /shop?category=vetements-homme 200 in 1655ms (compile: 16ms, render: 1638ms)
+ GET /cart 200 in 828ms (compile: 24ms, render: 804ms)
+ GET / 200 in 4.3s (compile: 20ms, render: 4.3s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611923134239-b9be5816e3b4?q=80&w=1000&auto=format&fit=crop 404
+ GET / 200 in 3.3s (compile: 23ms, render: 3.3s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611923134239-b9be5816e3b4?q=80&w=1000&auto=format&fit=crop 404
+ ✓ Compiled in 1160ms
+ GET / 200 in 2.6s (compile: 2.2s, render: 411ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611923134239-b9be5816e3b4?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ ✓ Compiled in 151ms
+ GET / 200 in 1408ms (compile: 245ms, render: 1163ms)
+ GET / 200 in 764ms (compile: 394ms, render: 370ms)
+ ✓ Compiled in 335ms
+ GET / 200 in 1028ms (compile: 380ms, render: 648ms)
+ GET / 200 in 4.6s (compile: 12ms, render: 4.6s)
+ GET /?category=accessoires 200 in 2.3s (compile: 13ms, render: 2.3s)
+ GET / 200 in 3.9s (compile: 16ms, render: 3.9s)
+ GET /?category=bijoux 200 in 2.7s (compile: 32ms, render: 2.7s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611652022445-e70e0a3b3e64?q=80&w=1000&auto=format&fit=crop 404
+ GET /?category=bijoux 200 in 2.4s (compile: 12ms, render: 2.4s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611652022445-e70e0a3b3e64?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611652022445-e70e0a3b3e64?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=bijoux 200 in 2.1s (compile: 15ms, render: 2.1s)
+ GET / 200 in 2.9s (compile: 23ms, render: 2.9s)
+ GET /shop 200 in 1916ms (compile: 15ms, render: 1901ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611923134239-b9be5816e3b4?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=bijoux 200 in 1939ms (compile: 12ms, render: 1927ms)
+ GET /product/bracelet-tennis-serti 200 in 2.5s (compile: 34ms, render: 2.5s)
+ GET / 200 in 2.2s (compile: 10ms, render: 2.2s)
+ GET / 200 in 3.6s (compile: 20ms, render: 3.6s)
+ GET /shop 200 in 2.9s (compile: 20ms, render: 2.9s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?category=bijoux 200 in 3.7s (compile: 12ms, render: 3.7s)
+ GET /shop?category=sneakers 200 in 3.6s (compile: 14ms, render: 3.6s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ GET /contact 200 in 982ms (compile: 21ms, render: 960ms)
+ GET / 200 in 2.8s (compile: 10ms, render: 2.8s)
+ GET / 200 in 2.3s (compile: 18ms, render: 2.3s)
+ GET /?category=vetements-femme 200 in 2.8s (compile: 13ms, render: 2.8s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ GET /?category=vetements-homme 200 in 3.1s (compile: 10ms, render: 3.1s)
+ GET /?category=vetements-homme 200 in 1228ms (compile: 678ms, render: 549ms)
+ GET / 200 in 2.9s (compile: 12ms, render: 2.9s)
+ GET / 200 in 2.7s (compile: 11ms, render: 2.6s)
+ GET / 200 in 2.7s (compile: 10ms, render: 2.7s)
+ GET / 200 in 3.8s (compile: 15ms, render: 3.8s)
+ GET / 200 in 3.0s (compile: 15ms, render: 3.0s)
+ GET / 200 in 3.3s (compile: 10ms, render: 3.2s)
+ GET / 200 in 2.8s (compile: 47ms, render: 2.7s)
+ GET / 200 in 2.0s (compile: 29ms, render: 1992ms)
+ GET / 200 in 1707ms (compile: 9ms, render: 1698ms)
+ GET / 200 in 1979ms (compile: 19ms, render: 1960ms)
+ GET /shop 200 in 1479ms (compile: 19ms, render: 1460ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611923134239-b9be5816e3b4?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1608042314453-ae338d80c428?q=80&w=1000&auto=format&fit=crop 404
+ GET /shop?search=AIR 200 in 1257ms (compile: 19ms, render: 1238ms)
+ GET /cart 200 in 486ms (compile: 16ms, render: 469ms)
+ GET /checkout 404 in 1525ms (compile: 803ms, render: 722ms)
+ GET /checkout 404 in 1100ms (compile: 93ms, render: 1006ms)
+ GET /cart 200 in 723ms (compile: 13ms, render: 710ms)
+ ✓ Compiled in 176ms
+ ⚠ Fast Refresh had to perform a full reload when ./context/CartContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /cart 200 in 622ms (compile: 434ms, render: 188ms)
+ GET /cart 200 in 998ms (compile: 16ms, render: 982ms)
+ ✓ Compiled in 154ms
+ ✓ Compiled in 224ms
+ GET /product/t-shirt-col-rond-basique 200 in 1966ms (compile: 254ms, render: 1712ms)
+ GET /cart 200 in 944ms (compile: 222ms, render: 722ms)
+ GET /shop?category=vetements-homme 200 in 2.4s (compile: 418ms, render: 1947ms)
+ GET /product/chemise-casual-bordeaux 200 in 1870ms (compile: 26ms, render: 1843ms)
+ GET /product/collier-fin-double-rangs 200 in 2.4s (compile: 34ms, render: 2.4s)
+ GET /cart 200 in 493ms (compile: 19ms, render: 474ms)
+ GET /checkout 404 in 731ms (compile: 176ms, render: 555ms)
+ GET /checkout 404 in 1031ms (compile: 45ms, render: 986ms)
+ ⚠ Fast Refresh had to perform a full reload when ./context/CartContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 224ms
+ GET /checkout 404 in 1232ms (compile: 251ms, render: 982ms)
+ ⚠ Fast Refresh had to perform a full reload when ./context/CartContext.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled in 151ms
+ GET /checkout 404 in 1078ms (compile: 355ms, render: 723ms)
+ ✓ Compiled in 275ms
+ GET /cart 200 in 2.0s (compile: 513ms, render: 1507ms)
+ GET / 200 in 5.7s (compile: 349ms, render: 5.4s)
+ GET /product/t-shirt-col-rond-basique 200 in 2.6s (compile: 343ms, render: 2.2s)
+ GET /cart 200 in 1267ms (compile: 5ms, render: 1262ms)
+ GET / 200 in 2.3s (compile: 7ms, render: 2.3s)
+ GET /product/t-shirt-col-rond-basique 200 in 1528ms (compile: 13ms, render: 1515ms)
+ GET /cart 200 in 512ms (compile: 6ms, render: 506ms)
+ GET / 200 in 1753ms (compile: 6ms, render: 1747ms)
+ GET /product/t-shirt-col-rond-basique 200 in 1649ms (compile: 14ms, render: 1635ms)
+ GET /cart 200 in 486ms (compile: 5ms, render: 481ms)
+ GET /cart 200 in 635ms (compile: 8ms, render: 627ms)
+ GET /cart 200 in 467ms (compile: 6ms, render: 461ms)
+ GET / 200 in 1735ms (compile: 6ms, render: 1729ms)
+ GET /product/robe-en-dentelle-prune 200 in 3.3s (compile: 26ms, render: 3.3s)
+ GET /cart 200 in 481ms (compile: 4ms, render: 477ms)
+ GET / 200 in 1670ms (compile: 4ms, render: 1666ms)
+ GET /product/airflex-runner 200 in 1719ms (compile: 13ms, render: 1705ms)
+ GET /product/classic-court-90s 200 in 1757ms (compile: 13ms, render: 1744ms)
+ GET /product/classic-court-90s 200 in 1902ms (compile: 16ms, render: 1885ms)
+ GET /product/urban-street-pro 200 in 2.3s (compile: 15ms, render: 2.3s)
+ GET /product/airflex-runner 200 in 1671ms (compile: 12ms, render: 1659ms)
+ GET /product/volt-edge 200 in 1748ms (compile: 13ms, render: 1735ms)
+ GET / 200 in 1390ms (compile: 3ms, render: 1386ms)
+ GET / 200 in 3.2s (compile: 8ms, render: 3.1s)
+C:\xampp\htdocs\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\[root-of-the-server]__2972281e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\xampp\htdocs\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\_751139b5._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ Error: useCart must be used within a CartProvider
+    at useCart (C:\xampp\htdocs\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\[root-of-the-server]__2972281e._.js:606:15)
+    at ProductCard (C:\xampp\htdocs\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\_751139b5._.js:370:162) {
+  digest: '1371163446'
+}
+ GET /shop?category=bijoux 500 in 4.1s (compile: 213ms, render: 3.9s)
+ GET /?category=bijoux 200 in 3.9s (compile: 6ms, render: 3.9s)
+ GET /product/montre-minimaliste-cuir-taupe 200 in 2.2s (compile: 28ms, render: 2.2s)
+ GET /?category=sneakers 200 in 1535ms (compile: 4ms, render: 1531ms)
+ GET /?category=vetements-femme 200 in 1451ms (compile: 4ms, render: 1447ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ GET /?category=accessoires 200 in 1524ms (compile: 4ms, render: 1521ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611923134239-b9be5816e3b4?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1608042314453-ae338d80c428?q=80&w=1000&auto=format&fit=crop 404
+ GET /product/montre-minimaliste-cuir-taupe 200 in 1832ms (compile: 15ms, render: 1817ms)
+ GET / 200 in 1629ms (compile: 4ms, render: 1625ms)
+ GET /shop?category=bijoux 200 in 1204ms (compile: 4ms, render: 1200ms)
+ GET /product/montre-minimaliste-cuir-taupe 200 in 1457ms (compile: 14ms, render: 1443ms)
+ GET /?category=accessoires 200 in 1592ms (compile: 11ms, render: 1582ms)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1608042314453-ae338d80c428?q=80&w=1000&auto=format&fit=crop 404
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1611923134239-b9be5816e3b4?q=80&w=1000&auto=format&fit=crop 404
+ GET / 200 in 1679ms (compile: 5ms, render: 1674ms)
+ GET /product/aeroflex-lite 200 in 2.6s (compile: 13ms, render: 2.6s)
+ GET /cart 200 in 535ms (compile: 4ms, render: 531ms)
+ GET /checkout 404 in 508ms (compile: 23ms, render: 484ms)
+ GET /checkout 404 in 857ms (compile: 58ms, render: 799ms)
+ GET /cart 200 in 544ms (compile: 12ms, render: 532ms)
+ GET / 200 in 2.3s (compile: 7ms, render: 2.3s)
+ GET / 200 in 1975ms (compile: 13ms, render: 1962ms)
+ GET /?min_price=50&max_price=100 200 in 4.0s (compile: 8ms, render: 4.0s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1548883354-94bf5ba0e6e5?q=80&w=1000&auto=format&fit=crop 404
+ GET /?min_price=50&max_price=100 200 in 5.0s (compile: 10ms, render: 5.0s)
+ ⨯ upstream image response failed for https://images.unsplash.com/photo-1600269452121-4f2416e1f224?q=80&w=1000&auto=format&fit=crop 404
+ GET /?min_price=100&max_price=150 200 in 1779ms (compile: 6ms, render: 1773ms)
+ GET /?min_price=150 200 in 1781ms (compile: 4ms, render: 1777ms)
+ GET /product/bottines-en-cuir-marron 200 in 2.6s (compile: 25ms, render: 2.6s)
+ GET /product/hamilton-montre-bracelet-cuir-bleu 200 in 3.4s (compile: 17ms, render: 3.4s)
+ GET /?min_price=150 200 in 3.3s (compile: 11ms, render: 3.3s)
+ GET /?min_price=150 200 in 2.6s (compile: 8ms, render: 2.6s)
+ GET / 200 in 2.3s (compile: 5ms, render: 2.3s)
+ GET / 200 in 2.7s (compile: 5ms, render: 2.7s)
+ GET / 200 in 1894ms (compile: 5ms, render: 1889ms)
+ GET /shop?new=1 200 in 1544ms (compile: 10ms, render: 1534ms)
+ GET /product/bottines-en-cuir-marron 200 in 34.1s (compile: 23ms, render: 34.1s)
+ GET / 200 in 4.7s (compile: 7ms, render: 4.7s)
+ GET /product/bottines-en-cuir-marron 200 in 3.2s (compile: 30ms, render: 3.2s)
+ GET /product/hamilton-montre-bracelet-cuir-bleu 200 in 3.9s (compile: 21ms, render: 3.9s)
+ GET /shop?new=1 200 in 143ms (compile: 6ms, render: 137ms)
+ GET /shop?new=1 200 in 5.0s (compile: 9ms, render: 5.0s)
+ GET /shop?search=Hamilton+Montre+bracelet+cuir+bleu 200 in 2.1s (compile: 12ms, render: 2.1s)
+ GET /product/hamilton-montre-bracelet-cuir-bleu 200 in 3.7s (compile: 42ms, render: 3.6s)
+ GET / 200 in 2.7s (compile: 9ms, render: 2.7s)
+ GET /?category=accessoires 200 in 3.3s (compile: 7ms, render: 3.3s)
+ GET /shop?search=Bottines+en+cuir+marron 200 in 2.1s (compile: 6ms, render: 2.1s)
+ GET /product/bottines-en-cuir-marron 200 in 3.1s (compile: 19ms, render: 3.1s)
+ GET / 200 in 2.7s (compile: 8ms, render: 2.7s)
+ GET /product/airflex-runner 200 in 4.4s (compile: 20ms, render: 4.4s)
+ GET /cart 200 in 615ms (compile: 8ms, render: 607ms)
+ GET / 200 in 2.4s (compile: 5ms, render: 2.4s)
+ GET /?category=sneakers 200 in 2.2s (compile: 4ms, render: 2.1s)
+ GET /?category=accessoires 200 in 1737ms (compile: 4ms, render: 1733ms)
+ GET /?category=vetements-homme 200 in 1572ms (compile: 5ms, render: 1567ms)
+ GET /?category=vetements-femme 200 in 2.0s (compile: 5ms, render: 2.0s)
+ GET /?category=vetements-femme 200 in 4.7s (compile: 143ms, render: 4.6s)
+ GET /?category=vetements-femme 200 in 2.7s (compile: 23ms, render: 2.7s)
+ GET / 200 in 3.0s (compile: 14ms, render: 3.0s)
+ GET /?category=accessoires 200 in 1669ms (compile: 11ms, render: 1658ms)
+ GET /product/sac-inspiration-nautique 200 in 4.5s (compile: 32ms, render: 4.4s)
+ GET /product/sac-inspiration-nautique 200 in 7.3s (compile: 46ms, render: 7.2s)
+ GET /shop?search=adidas 200 in 4.0s (compile: 15ms, render: 4.0s)
+ GET /product/sac-inspiration-nautique 200 in 9.2s (compile: 28ms, render: 9.2s)
+Error [TimeoutError]: The operation was aborted due to timeout
+    at ignore-listed frames {
+  code: 23,
+  INDEX_SIZE_ERR: 1,
+  DOMSTRING_SIZE_ERR: 2,
+  HIERARCHY_REQUEST_ERR: 3,
+  WRONG_DOCUMENT_ERR: 4,
+  INVALID_CHARACTER_ERR: 5,
+  NO_DATA_ALLOWED_ERR: 6,
+  NO_MODIFICATION_ALLOWED_ERR: 7,
+  NOT_FOUND_ERR: 8,
+  NOT_SUPPORTED_ERR: 9,
+  INUSE_ATTRIBUTE_ERR: 10,
+  INVALID_STATE_ERR: 11,
+  SYNTAX_ERR: 12,
+  INVALID_MODIFICATION_ERR: 13,
+  NAMESPACE_ERR: 14,
+  INVALID_ACCESS_ERR: 15,
+  VALIDATION_ERR: 16,
+  TYPE_MISMATCH_ERR: 17,
+  SECURITY_ERR: 18,
+  NETWORK_ERR: 19,
+  ABORT_ERR: 20,
+  URL_MISMATCH_ERR: 21,
+  QUOTA_EXCEEDED_ERR: 22,
+  TIMEOUT_ERR: 23,
+  INVALID_NODE_TYPE_ERR: 24,
+  DATA_CLONE_ERR: 25
+}
+Error [TimeoutError]: The operation was aborted due to timeout
+    at ignore-listed frames {
+  code: 23,
+  INDEX_SIZE_ERR: 1,
+  DOMSTRING_SIZE_ERR: 2,
+  HIERARCHY_REQUEST_ERR: 3,
+  WRONG_DOCUMENT_ERR: 4,
+  INVALID_CHARACTER_ERR: 5,
+  NO_DATA_ALLOWED_ERR: 6,
+  NO_MODIFICATION_ALLOWED_ERR: 7,
+  NOT_FOUND_ERR: 8,
+  NOT_SUPPORTED_ERR: 9,
+  INUSE_ATTRIBUTE_ERR: 10,
+  INVALID_STATE_ERR: 11,
+  SYNTAX_ERR: 12,
+  INVALID_MODIFICATION_ERR: 13,
+  NAMESPACE_ERR: 14,
+  INVALID_ACCESS_ERR: 15,
+  VALIDATION_ERR: 16,
+  TYPE_MISMATCH_ERR: 17,
+  SECURITY_ERR: 18,
+  NETWORK_ERR: 19,
+  ABORT_ERR: 20,
+  URL_MISMATCH_ERR: 21,
+  QUOTA_EXCEEDED_ERR: 22,
+  TIMEOUT_ERR: 23,
+  INVALID_NODE_TYPE_ERR: 24,
+  DATA_CLONE_ERR: 25
+}
+ GET /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1535944575480-975564904e3a%3Fq%3D80%26w%3D1000%26auto%3Dformat%26fit%3Dcrop&w=640&q=75 500 in 9.4s (compile: 9.1s, render: 333ms)
+ GET /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1535944575480-975564904e3a%3Fq%3D80%26w%3D1000%26auto%3Dformat%26fit%3Dcrop&w=640&q=75 500 in 9.4s (compile: 9.1s, render: 333ms)
+ GET /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1558191053-c03db2757e3d%3Fq%3D80%26w%3D1000%26auto%3Dformat%26fit%3Dcrop&w=640&q=75 500 in 9.5s (compile: 9.3s, render: 153ms)
+ GET /_next/image?url=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1558191053-c03db2757e3d%3Fq%3D80%26w%3D1000%26auto%3Dformat%26fit%3Dcrop&w=640&q=75 500 in 9.5s (compile: 9.3s, render: 153ms)
+ GET / 200 in 5.0s (compile: 16ms, render: 5.0s)
+ GET / 200 in 4.0s (compile: 130ms, render: 3.8s)
+ GET /?category=vetements-homme 200 in 2.4s (compile: 13ms, render: 2.3s)
+C:\xampp\htdocs\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\[root-of-the-server]__2972281e._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+C:\xampp\htdocs\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\_64904b7d._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ Error: useCart must be used within a CartProvider
+    at useCart (C:\xampp\htdocs\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\[root-of-the-server]__2972281e._.js:606:15)
+    at ProductCard (C:\xampp\htdocs\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\_64904b7d._.js:234:162) {
+  digest: '871126286'
+}
+ GET /shop?search=adidas 500 in 8.0s (compile: 12ms, render: 7.9s)
+ GET /product/veste-impermeable-techwear 200 in 7.4s (compile: 27ms, render: 7.4s)
+ GET /product/veste-impermeable-techwear 200 in 2.9s (compile: 38ms, render: 2.9s)
+ GET /shop?search=adidas 200 in 1910ms (compile: 12ms, render: 1898ms)
+ GET /shop?search=adidas 200 in 1932ms (compile: 13ms, render: 1920ms)
+ GET /?category=sneakers 200 in 3.4s (compile: 108ms, render: 3.3s)
+ GET /product/nike-air-max-95 200 in 2.4s (compile: 22ms, render: 2.4s)
+ GET /shop?search=adidas 200 in 2.6s (compile: 9ms, render: 2.6s)
+ GET /product/classic-court-90s 200 in 6.5s (compile: 20ms, render: 6.5s)
+ GET /product/classic-court-90s 200 in 5.6s (compile: 83ms, render: 5.5s)
+ GET /product/classic-court-90s 200 in 5.0s (compile: 27ms, render: 5.0s)
+ GET / 200 in 1569ms (compile: 10ms, render: 1560ms)
+ GET /?category=accessoires 200 in 1592ms (compile: 11ms, render: 1581ms)
+ GET /?category=accessoires 200 in 2.0s (compile: 18ms, render: 2.0s)
+ GET /shop?search=Nike 200 in 2.7s (compile: 23ms, render: 2.7s)
+ GET /shop?search=New%20Balance 200 in 1377ms (compile: 14ms, render: 1364ms)
+ GET /shop?search=ASICS 200 in 1635ms (compile: 14ms, render: 1621ms)
+ GET /shop?search=Puma 200 in 1891ms (compile: 29ms, render: 1862ms)
+ GET /shop?search=cargo 200 in 1636ms (compile: 21ms, render: 1616ms)
+ GET /shop?search=coquillage 200 in 835ms (compile: 11ms, render: 824ms)
+ GET /shop?search=nautique 200 in 790ms (compile: 11ms, render: 779ms)
+ GET /product/sac-a-dos-urbain 200 in 2.8s (compile: 26ms, render: 2.7s)
+ GET /shop?search=New+Balance+204L+%2F+574 200 in 951ms (compile: 13ms, render: 938ms)
+ GET /shop?search=New+Balance+204L 200 in 887ms (compile: 10ms, render: 877ms)
+ GET / 200 in 1499ms (compile: 13ms, render: 1486ms)
+ GET /product/robe-longue-rouge 200 in 1692ms (compile: 19ms, render: 1674ms)
+ GET / 200 in 1918ms (compile: 10ms, render: 1909ms)
+ GET /careers 200 in 1185ms (compile: 418ms, render: 767ms)
+ GET / 200 in 1433ms (compile: 15ms, render: 1418ms)
+ ✓ Compiled in 524ms
+ ✓ Compiled in 217ms
+ GET /shop?category=bijoux 200 in 2.5s (compile: 345ms, render: 2.1s)
+ GET / 200 in 3.2s (compile: 424ms, render: 2.8s)
+ GET /product/bijou-coquillage 200 in 2.6s (compile: 211ms, render: 2.4s)
+ GET / 200 in 4.6s (compile: 20ms, render: 4.6s)
+ GET /shop?category=bijoux 200 in 2.2s (compile: 15ms, render: 2.2s)
+ GET /shop 200 in 1476ms (compile: 10ms, render: 1466ms)
+ GET /product/echarpe-a-carreaux 200 in 1817ms (compile: 18ms, render: 1799ms)
+ ⨯ upstream image http://localhost:8000/storage/products/m5mN12R4gNp81z4B85pUbeOCcmdDhdQqZzNoW0tb.jpg resolved to private ip ["::1","127.0.0.1"]
+ GET / 200 in 2.6s (compile: 20ms, render: 2.5s)
+ GET /?category=accessoires 200 in 2.6s (compile: 16ms, render: 2.6s)
+ GET /?category=bijoux 200 in 2.4s (compile: 14ms, render: 2.4s)
+ ⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   ▲ Next.js 16.0.9 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://10.165.79.97:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 13.4s
+ ○ Compiling / ...
+ GET /?category=bijoux 200 in 21.8s (compile: 18.0s, render: 3.8s)
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[?25h
