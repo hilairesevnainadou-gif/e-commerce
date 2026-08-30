@@ -1,33 +1,49 @@
-# BloomShop
+<div align="center">
 
-BloomShop est une plateforme e-commerce complète composée de trois applications indépendantes réunies dans ce dépôt (monorepo) : une **API REST Laravel**, une **boutique publique Next.js** et un **back-office d'administration Next.js**.
+# 🌸 BloomShop
+
+**Plateforme e-commerce complète** — API REST Laravel, boutique publique et back-office Next.js réunis dans un monorepo.
+
+[![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white)](bloom-api)
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white)](bloomtpl-1.0.0)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](bloom-admin)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](bloom-admin)
+[![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white)](bloom-api)
+[![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)](bloom-api)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#licence)
+
+</div>
+
+---
+
+BloomShop est composé de **trois applications indépendantes** réunies dans ce dépôt (monorepo) : une **API REST Laravel**, une **boutique publique Next.js** et un **back-office d'administration Next.js**.
 
 | Dossier | Rôle | Stack |
 | --- | --- | --- |
-| [`bloom-api/`](bloom-api) | API REST : produits, catégories, commandes, avis, réglages, facturation PDF, authentification | Laravel 12 (PHP 8.2+), MySQL |
-| [`bloomtpl-1.0.0/`](bloomtpl-1.0.0) | Boutique publique (vitrine client) | Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4 |
-| [`bloom-admin/`](bloom-admin) | Back-office pour gérer produits, catégories, bannières, commandes et réglages | Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4 |
+| 🧠 [`bloom-api/`](bloom-api) | API REST : produits, catégories, commandes, avis, réglages, facturation PDF, authentification | Laravel 12 (PHP 8.2+), MySQL |
+| 🛍️ [`bloomtpl-1.0.0/`](bloomtpl-1.0.0) | Boutique publique (vitrine client) | Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4 |
+| 🛠️ [`bloom-admin/`](bloom-admin) | Back-office pour gérer produits, catégories, bannières, commandes et réglages | Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4 |
 
-Les deux applications front-end sont des clients purement statiques/SSR qui consomment l'API `bloom-api` via HTTP — aucune des deux n'accède directement à la base de données.
+> Les deux applications front-end sont des clients purement statiques/SSR qui consomment l'API `bloom-api` via HTTP — aucune des deux n'accède directement à la base de données.
 
-## Sommaire
+## 📋 Sommaire
 
-- [Fonctionnalités](#fonctionnalités)
-- [Architecture](#architecture)
-- [Prérequis](#prérequis)
-- [Installation en local](#installation-en-local)
+- [Fonctionnalités](#-fonctionnalités)
+- [Architecture](#-architecture)
+- [Prérequis](#-prérequis)
+- [Installation en local](#-installation-en-local)
   - [1. Base de données](#1-base-de-données)
   - [2. API (bloom-api)](#2-api-bloom-api)
   - [3. Boutique publique (bloomtpl-1.0.0)](#3-boutique-publique-bloomtpl-100)
   - [4. Back-office (bloom-admin)](#4-back-office-bloom-admin)
-- [Démarrage rapide (tout en un)](#démarrage-rapide-tout-en-un)
-- [Structure du projet](#structure-du-projet)
-- [Déploiement en production](#déploiement-en-production)
-- [Licence](#licence)
+- [Démarrage rapide (tout en un)](#-démarrage-rapide-tout-en-un)
+- [Structure du projet](#-structure-du-projet)
+- [Déploiement en production](#-déploiement-en-production)
+- [Licence](#-licence)
 
-## Fonctionnalités
+## ✨ Fonctionnalités
 
-### Boutique publique (`bloomtpl-1.0.0`)
+### 🛍️ Boutique publique (`bloomtpl-1.0.0`)
 
 - Catalogue produits avec filtres, catégories et fiches détaillées (variantes taille/couleur, galerie d'images, avis, produits liés)
 - Panier persistant avec recommandations
@@ -38,7 +54,7 @@ Les deux applications front-end sont des clients purement statiques/SSR qui cons
 - Pages institutionnelles : À propos, Blog, Carrières, Presse, Aide, Contact, mentions légales, confidentialité, cookies, accessibilité, livraison, retours, moyens de paiement, CGV
 - Réglages de la boutique (nom, devise, taxes, frais de livraison, coordonnées bancaires…) pilotés dynamiquement depuis l'API
 
-### Back-office (`bloom-admin`)
+### 🛠️ Back-office (`bloom-admin`)
 
 - Authentification admin (via Laravel Sanctum)
 - Gestion des produits (CRUD, images multiples, image principale, variantes taille/couleur)
@@ -47,36 +63,31 @@ Les deux applications front-end sont des clients purement statiques/SSR qui cons
 - Gestion des commandes (consultation, changement de statut)
 - Gestion des réglages globaux de la boutique
 
-### API (`bloom-api`)
+### 🧠 API (`bloom-api`)
 
 - Endpoints publics : produits, catégories, avis, bannières, réglages
 - Authentification (inscription/connexion) et endpoints protégés (`/me`, historique de commande) via Laravel Sanctum
 - Création de commande, génération de facture et de reçu PDF (liens signés, sans connexion requise) via `barryvdh/laravel-dompdf`
 - Espace `admin/*` protégé par un middleware de rôle (`EnsureUserIsAdmin`) pour la gestion complète du catalogue, des commandes et des réglages
 
-## Architecture
+## 🏗 Architecture
 
-```text
-┌─────────────────────┐      ┌──────────────────────┐
-│  bloomtpl-1.0.0      │      │  bloom-admin          │
-│  Boutique publique    │      │  Back-office admin    │
-│  Next.js (port 3000) │      │  Next.js (port 3001) │
-└──────────┬───────────┘      └──────────┬───────────┘
-           │           HTTP / JSON       │
-           └──────────────┬──────────────┘
-                           ▼
-                  ┌──────────────────┐
-                  │   bloom-api        │
-                  │   Laravel (8000)  │
-                  └────────┬──────────┘
-                           ▼
-                  ┌──────────────────┐
-                  │  MySQL/MariaDB    │
-                  │  bloom_ecommerce  │
-                  └──────────────────┘
+```mermaid
+flowchart TB
+    subgraph Front["Applications front-end"]
+        Shop["🛍️ bloomtpl-1.0.0<br/>Boutique publique<br/>Next.js — port 3000"]
+        Admin["🛠️ bloom-admin<br/>Back-office<br/>Next.js — port 3001"]
+    end
+
+    API["🧠 bloom-api<br/>Laravel — port 8000"]
+    DB[("🗄️ MySQL / MariaDB<br/>bloom_ecommerce")]
+
+    Shop -- "HTTP / JSON" --> API
+    Admin -- "HTTP / JSON" --> API
+    API --> DB
 ```
 
-## Prérequis
+## ⚙️ Prérequis
 
 - **PHP 8.2+** avec les extensions usuelles de Laravel (pdo_mysql, mbstring, openssl, etc.)
 - **Composer**
@@ -84,7 +95,7 @@ Les deux applications front-end sont des clients purement statiques/SSR qui cons
 - **MySQL / MariaDB** (ou XAMPP, qui fournit Apache + MySQL + PHP)
 - (Optionnel) **Redis** si vous souhaitez l'utiliser pour le cache/les queues au lieu du driver `database`
 
-## Installation en local
+## 🚀 Installation en local
 
 ### 1. Base de données
 
@@ -181,7 +192,7 @@ npm run dev
 
 Disponible sur `http://localhost:3001`.
 
-## Démarrage rapide (tout en un)
+## ⚡ Démarrage rapide (tout en un)
 
 Une fois les trois applications installées et configurées comme ci-dessus, trois terminaux suffisent pour tout lancer :
 
@@ -198,7 +209,7 @@ cd bloom-admin && npm run dev
 
 `bloom-api` fournit également un script Composer `composer run dev` qui démarre en parallèle le serveur PHP, le worker de queue, les logs (`pail`) et Vite — pratique pour le développement de l'API seule.
 
-## Structure du projet
+## 📁 Structure du projet
 
 ```text
 ecommerce/
@@ -223,7 +234,7 @@ ecommerce/
     └── lib/               Client API vers bloom-api
 ```
 
-## Déploiement en production
+## 📦 Déploiement en production
 
 ### API (`bloom-api`)
 
@@ -247,9 +258,15 @@ Dans chaque environnement de production, définir `NEXT_PUBLIC_API_URL` pointant
 
 > Comme `bloom-api` sert de source unique de vérité (catalogue, commandes, réglages), assurez-vous que CORS est correctement configuré côté Laravel (`config/cors.php`) pour autoriser les domaines de la boutique publique et du back-office.
 
-## Licence
+## 📄 Licence
 
 - `bloomtpl-1.0.0` est basé à l'origine sur le template [BloomShop](https://themewagon.com/themes/bloomtpl/) de ThemeWagon (MIT), largement personnalisé et étendu depuis.
 - `bloom-api` est un projet Laravel, framework open-source sous licence [MIT](https://opensource.org/licenses/MIT).
-#   e - c o m m e r c e  
- 
+
+---
+
+<div align="center">
+
+Fait avec 🌸 par l'équipe BloomShop
+
+</div>
