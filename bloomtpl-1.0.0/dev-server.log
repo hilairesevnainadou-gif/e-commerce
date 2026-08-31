@@ -5,98 +5,20 @@
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
    ▲ Next.js 16.0.9 (Turbopack)
    - Local:         http://localhost:3000
-   - Network:       http://10.165.79.97:3000
+   - Network:       http://10.97.233.97:3000
    - Environments: .env.local
 
  ✓ Starting...
- ✓ Ready in 29.7s
- ○ Compiling /product/[slug] ...
- GET /product/robe-en-dentelle-prune 200 in 47s (compile: 39.0s, render: 8.4s)
-[TypeError: fetch failed] {
-  [cause]: Error: getaddrinfo ENOTFOUND images.unsplash.com
-      at ignore-listed frames {
-    errno: -3008,
-    code: 'ENOTFOUND',
-    syscall: 'getaddrinfo',
-    hostname: 'images.unsplash.com'
-  }
-}
-[TypeError: fetch failed] {
-  [cause]: Error: getaddrinfo ENOTFOUND images.unsplash.com
-      at ignore-listed frames {
-    errno: -3008,
-    code: 'ENOTFOUND',
-    syscall: 'getaddrinfo',
-    hostname: 'images.unsplash.com'
-  }
-}
-[TypeError: fetch failed] {
-  [cause]: Error: getaddrinfo ENOTFOUND images.unsplash.com
-      at ignore-listed frames {
-    errno: -3008,
-    code: 'ENOTFOUND',
-    syscall: 'getaddrinfo',
-    hostname: 'images.unsplash.com'
-  }
-}
-[TypeError: fetch failed] {
-  [cause]: Error: getaddrinfo ENOTFOUND images.unsplash.com
-      at ignore-listed frames {
-    errno: -3008,
-    code: 'ENOTFOUND',
-    syscall: 'getaddrinfo',
-    hostname: 'images.unsplash.com'
-  }
-}
- ○ Compiling /_error ...
- GET /product/robe-en-dentelle-prune 200 in 6.4s (compile: 251ms, render: 6.2s)
- ✓ Compiled in 311ms
- GET /product/robe-en-dentelle-prune 200 in 7.1s (compile: 66ms, render: 7.1s)
+ ✓ Ready in 31.4s
  ○ Compiling / ...
- GET / 200 in 18.7s (compile: 7.1s, render: 11.7s)
- ○ Compiling /shop ...
- GET /shop 200 in 14.9s (compile: 3.7s, render: 11.3s)
- GET /product/airflex-runner 200 in 10.5s (compile: 145ms, render: 10.4s)
+ GET / 200 in 7.0s (compile: 65ms, render: 6.9s)
+ ○ Compiling /product/[slug] ...
+ GET / 200 in 6.0s (compile: 17ms, render: 6.0s)
+ GET /product/zenith-flow 200 in 12.8s (compile: 6.6s, render: 6.2s)
  ○ Compiling /cart ...
- GET /cart 200 in 13.3s (compile: 10.2s, render: 3.1s)
+ GET /cart 200 in 4.9s (compile: 3.6s, render: 1353ms)
  ○ Compiling /checkout ...
- GET /cart 200 in 11.5s (compile: 67ms, render: 11.4s)
- GET /shop 200 in 17.5s (compile: 36ms, render: 17.5s)
- GET /checkout 200 in 14.9s (compile: 7.6s, render: 7.3s)
- GET /product/airflex-runner 200 in 6.0s (compile: 47ms, render: 5.9s)
- GET /cart 200 in 1809ms (compile: 31ms, render: 1778ms)
- GET /checkout/confirmation 200 in 3.1s (compile: 1371ms, render: 1682ms)
- GET /shop 200 in 6.1s (compile: 34ms, render: 6.1s)
- GET /product/airflex-runner 200 in 5.1s (compile: 37ms, render: 5.1s)
- GET /cart 200 in 847ms (compile: 17ms, render: 830ms)
- GET /shop 200 in 10.6s (compile: 25ms, render: 10.6s)
- GET /product/airflex-runner 200 in 7.4s (compile: 38ms, render: 7.4s)
- GET /cart 200 in 2.6s (compile: 47ms, render: 2.6s)
- ⨯ [TypeError: fetch failed] {
-  digest: '3227098399',
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'ECONNREFUSED'
-  }
-}
- ⨯ [TypeError: fetch failed] {
-  digest: '3227098399',
-  [cause]: AggregateError: 
-      at ignore-listed frames {
-    code: 'ECONNREFUSED'
-  }
-}
- GET / 200 in 744ms (compile: 203ms, render: 540ms)
- GET / 200 in 4.1s (compile: 44ms, render: 4.1s)
- GET / 200 in 2.3s (compile: 22ms, render: 2.3s)
- ✓ Compiled in 3.1s
- GET / 200 in 3.9s (compile: 3.1s, render: 796ms)
- GET / 200 in 191ms (compile: 15ms, render: 176ms)
- GET / 200 in 282ms (compile: 24ms, render: 259ms)
- GET / 200 in 186ms (compile: 16ms, render: 170ms)
- GET / 200 in 372ms (compile: 15ms, render: 357ms)
- GET / 200 in 349ms (compile: 17ms, render: 332ms)
- ✓ Compiled in 2.1s
- GET / 200 in 12.2s (compile: 705ms, render: 11.5s)
- GET / 200 in 6.6s (compile: 72ms, render: 6.5s)
- GET / 200 in 9.9s (compile: 194ms, render: 9.7s)
+ GET /checkout 200 in 5.0s (compile: 3.6s, render: 1407ms)
+ GET /checkout/confirmation 200 in 3.7s (compile: 2.1s, render: 1633ms)
+ GET / 200 in 5.5s (compile: 112ms, render: 5.3s)
+ GET /checkout/confirmation 200 in 1764ms (compile: 92ms, render: 1673ms)
