@@ -15,6 +15,7 @@ import {
   LayoutDashboard,
   ListTree,
   LogOut,
+  Mail,
   Package,
   Settings as SettingsIcon,
   ShoppingBag,
@@ -30,6 +31,7 @@ const navItems = [
   { href: "/categories", label: "Catégories", icon: ListTree },
   { href: "/banners", label: "Bannières", icon: ImageIcon },
   { href: "/orders", label: "Commandes", icon: ShoppingBag },
+  { href: "/subscribers", label: "Abonnés newsletter", icon: Mail },
   { href: "/settings", label: "Réglages", icon: SettingsIcon },
 ];
 

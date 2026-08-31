@@ -330,6 +330,38 @@ export async function deleteBanner(token: string, id: number): Promise<void> {
   await apiFetch<void>(`/admin/banners/${id}`, token, { method: "DELETE" });
 }
 
+// Subscribers (admin)
+export interface Subscriber {
+  id: number;
+  email: string;
+  created_at: string;
+}
+
+export async function getAdminSubscribers(
+  token: string,
+  params?: { page?: number; perPage?: number }
+): Promise<Paginated<Subscriber>> {
+  const query = new URLSearchParams();
+  query.set("per_page", String(params?.perPage ?? 20));
+  if (params?.page) query.set("page", String(params.page));
+
+  return apiFetch<Paginated<Subscriber>>(`/admin/subscribers?${query.toString()}`, token);
+}
+
+export async function deleteSubscriber(token: string, id: number): Promise<void> {
+  await apiFetch<void>(`/admin/subscribers/${id}`, token, { method: "DELETE" });
+}
+
+export async function exportSubscribers(token: string): Promise<Blob> {
+  const res = await fetch(`${API_URL}/admin/subscribers/export`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) {
+    throw new ApiError("Impossible d'exporter les abonnés.", res.status);
+  }
+  return res.blob();
+}
+
 // Settings (public)
 export async function getSettings(): Promise<Settings> {
   const result = await apiFetch<Single<Settings>>("/settings");

@@ -7,9 +7,11 @@ use App\Http\Controllers\Api\Admin\NotificationController as AdminNotificationCo
 use App\Http\Controllers\Api\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Api\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Api\Admin\SettingController as AdminSettingController;
+use App\Http\Controllers\Api\Admin\SubscriberController as AdminSubscriberController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\BannerController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\NewsletterController;
 use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\OrderPdfController;
 use App\Http\Controllers\Api\ProductController;
@@ -25,6 +27,7 @@ Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/categories/{slug}', [CategoryController::class, 'show']);
 Route::get('/settings', [SettingController::class, 'show']);
 Route::get('/banners', [BannerController::class, 'index']);
+Route::post('/newsletter/subscribe', [NewsletterController::class, 'store']);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -62,4 +65,7 @@ Route::middleware(['auth:sanctum', 'admin'])->prefix('admin')->group(function ()
     Route::patch('orders/{order}', [AdminOrderController::class, 'update']);
     Route::get('settings', [AdminSettingController::class, 'show']);
     Route::post('settings', [AdminSettingController::class, 'update']);
+    Route::get('subscribers', [AdminSubscriberController::class, 'index']);
+    Route::get('subscribers/export', [AdminSubscriberController::class, 'export']);
+    Route::delete('subscribers/{subscriber}', [AdminSubscriberController::class, 'destroy']);
 });

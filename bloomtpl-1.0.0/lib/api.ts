@@ -117,3 +117,11 @@ export async function createOrder(payload: CreateOrderPayload): Promise<Order> {
   });
   return result.data;
 }
+
+export async function subscribeToNewsletter(email: string): Promise<void> {
+  await apiFetch<{ message: string }>("/newsletter/subscribe", {
+    method: "POST",
+    body: JSON.stringify({ email }),
+    cache: "no-store",
+  });
+}

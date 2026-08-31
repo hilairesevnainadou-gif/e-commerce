@@ -72,3 +72,31 @@
  GET /shop 200 in 10.6s (compile: 25ms, render: 10.6s)
  GET /product/airflex-runner 200 in 7.4s (compile: 38ms, render: 7.4s)
  GET /cart 200 in 2.6s (compile: 47ms, render: 2.6s)
+ ⨯ [TypeError: fetch failed] {
+  digest: '3227098399',
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'ECONNREFUSED'
+  }
+}
+ ⨯ [TypeError: fetch failed] {
+  digest: '3227098399',
+  [cause]: AggregateError: 
+      at ignore-listed frames {
+    code: 'ECONNREFUSED'
+  }
+}
+ GET / 200 in 744ms (compile: 203ms, render: 540ms)
+ GET / 200 in 4.1s (compile: 44ms, render: 4.1s)
+ GET / 200 in 2.3s (compile: 22ms, render: 2.3s)
+ ✓ Compiled in 3.1s
+ GET / 200 in 3.9s (compile: 3.1s, render: 796ms)
+ GET / 200 in 191ms (compile: 15ms, render: 176ms)
+ GET / 200 in 282ms (compile: 24ms, render: 259ms)
+ GET / 200 in 186ms (compile: 16ms, render: 170ms)
+ GET / 200 in 372ms (compile: 15ms, render: 357ms)
+ GET / 200 in 349ms (compile: 17ms, render: 332ms)
+ ✓ Compiled in 2.1s
+ GET / 200 in 12.2s (compile: 705ms, render: 11.5s)
+ GET / 200 in 6.6s (compile: 72ms, render: 6.5s)
+ GET / 200 in 9.9s (compile: 194ms, render: 9.7s)
