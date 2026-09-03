@@ -10,10 +10,10 @@ import { useState } from "react";
 
 const BUDGETS: { label: string; min?: number; max?: number }[] = [
   { label: "Tous les prix" },
-  { label: "Moins de 50 €", max: 50 },
-  { label: "50 € – 100 €", min: 50, max: 100 },
-  { label: "100 € – 150 €", min: 100, max: 150 },
-  { label: "Plus de 150 €", min: 150 },
+  { label: "Moins de 100 €", max: 100 },
+  { label: "100 € – 500 €", min: 100, max: 500 },
+  { label: "500 € – 1500 €", min: 500, max: 1500 },
+  { label: "Plus de 1500 €", min: 1500 },
 ];
 
 export default function ShopFilters({ categories }: { categories: Category[] }) {

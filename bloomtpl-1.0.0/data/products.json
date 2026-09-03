@@ -1,72 +1,121 @@
 [
   {
     "id": 1,
-    "name": "AirFlex Runner",
-    "price": 89,
-    "image": "https://images.unsplash.com/photo-1579338559194-a162d19bf842?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Lightweight running sneakers designed for speed and comfort. Breathable mesh and durable sole."
+    "name": "Aero Route Carbon",
+    "price": 2499,
+    "image": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Vélo de route haut de gamme conçu pour la performance. Cadre carbone monocoque aérodynamique, groupe Shimano 105 12 vitesses, roues carbone 40 mm, freins à disque hydrauliques. Poids : 8,1 kg."
   },
   {
     "id": 2,
-    "name": "Urban Street Pro",
-    "price": 99,
-    "image": "https://images.unsplash.com/photo-1608667508764-33cf0726b13a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Minimalist sneakers for everyday wear. Premium leather with a modern urban look."
+    "name": "Endurance Sport 105",
+    "price": 1899,
+    "image": "https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Vélo de route endurance pour les longues sorties. Cadre aluminium 6061 triple-butté, fourche carbone, groupe Shimano 105 11 vitesses, freins à disque mécaniques. Poids : 9,4 kg."
   },
   {
     "id": 3,
-    "name": "Classic Court 90s",
-    "price": 79,
-    "image": "https://images.unsplash.com/photo-1465453869711-7e174808ace9?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Retro-inspired sneakers with a tennis court vibe. Perfect balance between comfort and style."
+    "name": "Gravel Explorer",
+    "price": 1699,
+    "image": "https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Vélo gravel polyvalent pour la route comme le chemin. Cadre aluminium avec passage de pneu jusqu'à 45 mm, groupe Shimano GRX 11 vitesses, freins à disque hydrauliques. Poids : 10,2 kg."
   },
   {
     "id": 4,
-    "name": "Volt Edge",
-    "price": 119,
-    "image": "https://images.unsplash.com/photo-1512374382149-233c42b6a83b?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Performance sneakers with bold details. Responsive cushioning for all-day energy."
+    "name": "Trail Master 29",
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1506316940527-4d1c138978a0?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "VTT semi-rigide pour la découverte des sentiers. Cadre aluminium, suspension avant 120 mm, roues 29 pouces, groupe Shimano Deore 12 vitesses. Poids : 13,8 kg."
   },
   {
     "id": 5,
-    "name": "Zenith Flow",
-    "price": 129,
-    "image": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Premium lifestyle sneakers blending high-quality knit material and futuristic design."
+    "name": "Enduro Pro Suspension",
+    "price": 2199,
+    "image": "https://images.unsplash.com/photo-1511994298241-608e28f14fde?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "VTT tout-suspendu pour l'enduro et la descente. Débattement 150 mm avant/arrière, roues 27,5 pouces, groupe SRAM GX Eagle 12 vitesses. Poids : 14,9 kg."
   },
   {
     "id": 6,
-    "name": "Street Vibe Low",
-    "price": 69,
-    "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Casual low-top sneakers with a timeless silhouette. Built for versatility and comfort."
+    "name": "Urban e-Cruiser 500W",
+    "price": 2399,
+    "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Vélo électrique urbain puissant. Moteur moyeu arrière 500 W, batterie 48V/14Ah amovible, autonomie jusqu'à 90 km. Poids : 24 kg."
   },
   {
     "id": 7,
-    "name": "Nova Horizon",
-    "price": 109,
-    "image": "https://images.unsplash.com/photo-1516767254874-281bffac9e9a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "High-top sneakers crafted with suede and mesh. Perfect mix of streetwear and performance."
+    "name": "City e-Comfort",
+    "price": 1999,
+    "image": "https://images.unsplash.com/photo-1620802051782-725fa33db067?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Vélo électrique confort pour les trajets du quotidien. Moteur pédalier central 250 W, batterie 36V/11Ah, autonomie jusqu'à 70 km. Poids : 22,5 kg."
   },
   {
     "id": 8,
-    "name": "Pulse React",
-    "price": 99,
-    "image": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Dynamic sneakers with responsive cushioning. Designed for training and everyday comfort."
+    "name": "City Classic 7V",
+    "price": 649,
+    "image": "https://images.unsplash.com/photo-1602517232715-c4a366f0ce1b?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Vélo de ville confort tout équipé. Cadre acier, dérailleur 7 vitesses, garde-boue et porte-bagages inclus. Poids : 15,5 kg."
   },
   {
     "id": 9,
-    "name": "Core Street Retro",
-    "price": 85,
-    "image": "https://images.unsplash.com/photo-1621315271772-28b1f3a5df87?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Old-school sneakers inspired by 80s basketball. Durable construction with vintage vibes."
+    "name": "Transmission Chaîne & Cassette 11V",
+    "price": 89,
+    "image": "https://images.unsplash.com/photo-1562486033-14af01d4add5?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Kit de transmission 11 vitesses compatible Shimano et SRAM. Chaîne anti-usure, cassette 11-32 dents. Poids : 380 g."
   },
   {
     "id": 10,
-    "name": "AeroFlex Lite",
-    "price": 75,
-    "image": "https://images.unsplash.com/photo-1496202703211-aa28e9500c30?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "description": "Ultra-light sneakers designed for everyday mobility. Breathable and flexible design."
+    "name": "Roues AeroDisc Wheelset 28\"",
+    "price": 349,
+    "image": "https://images.unsplash.com/photo-1618762044398-ec1e7e048bbd?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Paire de roues carbone/aluminium pour freinage à disque. Jantes 28 pouces, moyeux à roulements scellés. Poids : 1 650 g la paire."
+  },
+  {
+    "id": 11,
+    "name": "Pédales GripLock Clipless",
+    "price": 79,
+    "image": "https://images.unsplash.com/photo-1601067095185-b8b73ad7db10?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Pédales automatiques en aluminium usiné CNC. Cales incluses, roulements scellés. Poids : 320 g la paire."
+  },
+  {
+    "id": 12,
+    "name": "Selle ComfortRide Gel",
+    "price": 45,
+    "image": "https://images.unsplash.com/photo-1580224881685-6bb1d75f1046?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Selle ergonomique rembourrée en gel pour un confort longue distance. Base en nylon renforcé, rails en acier chromé. Poids : 320 g."
+  },
+  {
+    "id": 13,
+    "name": "Kit Freins à Disque PowerStop",
+    "price": 129,
+    "image": "https://images.unsplash.com/photo-1618762098304-38e6b03db348?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Kit complet de freins à disque hydrauliques avant/arrière. Disques flottants 160 mm, plaquettes semi-métalliques."
+  },
+  {
+    "id": 14,
+    "name": "Casque AeroShell MIPS",
+    "price": 99,
+    "image": "https://images.unsplash.com/photo-1591511275477-88f079d88154?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Casque vélo avec coque in-mold et technologie MIPS anti-rotation. 18 aérations, réglage occipital."
+  },
+  {
+    "id": 15,
+    "name": "Antivol SecureLock U",
+    "price": 59,
+    "image": "https://images.unsplash.com/photo-1664146158348-6a8c71ac62d1?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Antivol en U avec arceau en acier trempé 13 mm. Support de fixation cadre inclus, livré avec 2 clés."
+  },
+  {
+    "id": 16,
+    "name": "Éclairage DuoBeam LED Set",
+    "price": 39,
+    "image": "https://images.unsplash.com/photo-1579118690145-7753994c2d56?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Feu avant 400 lumens et feu arrière rechargeables par USB-C. 5 modes d'éclairage, autonomie jusqu'à 10 h."
+  },
+  {
+    "id": 17,
+    "name": "Sacoche TrailPannier XL",
+    "price": 69,
+    "image": "https://images.unsplash.com/photo-1783085663252-f04814cf3c61?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.1.0",
+    "description": "Sacoche porte-bagages 25 L en tissu déperlant, bandes réfléchissantes et fixation rapide à crochets."
   }
 ]

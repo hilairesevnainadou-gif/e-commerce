@@ -17,3 +17,121 @@
  GET /login 200 in 393ms (next.js: 19ms, application-code: 374ms)
  GET / 200 in 327ms (next.js: 33ms, application-code: 294ms)
  GET / 200 in 171ms (next.js: 23ms, application-code: 149ms)
+ GET /orders/16 200 in 16.5s (next.js: 16.4s, application-code: 119ms)
+✓ Compiled in 6.1s
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: next/font: warning:
+Failed to download Inter from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+ GET /orders/16 200 in 2.8s (next.js: 617ms, application-code: 2.2s)
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: next/font: warning:
+Failed to download Inter from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: next/font: warning:
+Failed to download Inter from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: next/font: warning:
+Failed to download Inter from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+
+⚠ [next]/internal/font/google/inter_7b064e0d.module.css
+Warning: next/font: warning:
+Failed to download Inter from Google Fonts. Using a fallback font instead.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_7b064e0d.module.css
+    [next]/internal/font/google/inter_7b064e0d.js
+    ./app/layout.tsx
+
+

@@ -361,7 +361,7 @@ export default function SettingsPage() {
                     id="bank_account_holder"
                     value={settings.bank_account_holder || ""}
                     onChange={(e) => update("bank_account_holder", e.target.value)}
-                    placeholder="BloomShop SAS"
+                    placeholder="Maison Vélocité SAS"
                   />
                 </div>
                 <div className="space-y-2">

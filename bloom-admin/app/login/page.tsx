@@ -119,7 +119,7 @@ function LoginForm() {
         </div>
 
         <p className="relative text-xs text-white/60">
-          © {new Date().getFullYear()} BloomShop. Tous droits réservés.
+          © {new Date().getFullYear()} Maison Vélocité. Tous droits réservés.
         </p>
       </div>
 

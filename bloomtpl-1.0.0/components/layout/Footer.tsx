@@ -13,12 +13,10 @@ export default function Footer() {
       title: "Boutique",
       links: [
         { href: "/shop", label: "Tous les produits" },
-        { href: "/shop?category=sneakers", label: "Sneakers" },
-        { href: "/shop?category=vetements-femme", label: "Vêtements Femme" },
-        { href: "/shop?category=vetements-homme", label: "Vêtements Homme" },
-        { href: "/shop?category=accessoires", label: "Accessoires" },
-        { href: "/shop?category=bijoux", label: "Bijoux" },
-        { href: "/shop?new=1", label: "Nouveautés" },
+        { href: "/shop?category=velos-de-route", label: "Vélos de route" },
+        { href: "/shop?category=vtt", label: "VTT" },
+        { href: "/shop?category=velos-electriques", label: "Vélos électriques" },
+        { href: "/shop?category=pieces-composants", label: "Pièces & Accessoires" },
         { href: "/shop?on_sale=1", label: "Promotions" },
       ],
     },
@@ -87,7 +85,7 @@ export default function Footer() {
               <p className="text-muted-foreground mb-6 max-w-sm">
                 {settings.description ||
                   settings.tagline ||
-                  "Vêtements, sneakers, accessoires et bijoux pour elle et pour lui. Une sélection pensée pour durer, livrée rapidement partout en France."}
+                  "Vélos de route, VTT, électriques et de ville, ainsi que toutes les pièces et accessoires pour les entretenir. Une sélection pensée pour durer, livrée rapidement partout en France."}
               </p>
 
               <div className="space-y-3">
