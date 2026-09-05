@@ -1,118 +1,320 @@
+@php
+    use App\Support\Countries;
+    use App\Support\MoneyFormatter;
+
+    $money = fn ($amount) => MoneyFormatter::format($amount, $settings->currency);
+
+    // Monogram standing in for the logo: dompdf runs with remote images disabled,
+    // so a fetched logo_url would silently render as a broken box.
+    $initials = collect(preg_split('/\s+/', trim((string) $settings->site_name)))
+        ->filter()
+        ->take(2)
+        ->map(fn ($word) => mb_strtoupper(mb_substr($word, 0, 1)))
+        ->implode('');
+
+    $paid = (bool) $order->paid_at;
+
+    $statusLabel = $paid ? 'Payée' : match ($order->status) {
+        'pending' => 'En attente de paiement',
+        'processing' => 'En cours de traitement',
+        'shipped' => 'Expédiée',
+        'cancelled' => 'Annulée',
+        default => ucfirst((string) $order->status),
+    };
+
+    // 0.0800 reads as "8", 0.0850 as "8,5" — never "8,00".
+    $taxPercent = rtrim(rtrim(number_format((float) $settings->tax_rate * 100, 2, ',', ' '), '0'), ',');
+
+    $country = Countries::name($order->country);
+    $unitCount = $order->items->sum('quantity');
+@endphp
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <style>
-    @page { margin: 48px 48px 70px 48px; }
+    /* No side margins so the masthead band bleeds to the paper edge; the bottom
+       margin reserves the strip the fixed footer sits in. */
+    @page { margin: 0 0 76px 0; }
     * { box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: #1a1a1a; font-size: 12px; }
-    .header { width: 100%; overflow: hidden; margin-bottom: 28px; }
-    .header h1 { float: left; font-size: 26px; margin: 0; font-weight: 700; }
-    .brand { float: right; text-align: right; }
-    .brand .name { font-size: 15px; font-weight: 700; }
-    .meta { width: 100%; margin-bottom: 22px; }
-    .meta td { padding: 1px 0; font-size: 12px; }
-    .meta .label { font-weight: 700; width: 130px; }
-    .parties { width: 100%; margin-bottom: 22px; }
-    .parties td { vertical-align: top; width: 50%; font-size: 12px; line-height: 1.5; }
-    .parties .title { font-weight: 700; margin-bottom: 4px; display: block; }
-    .amount-line { font-size: 16px; font-weight: 700; margin: 22px 0 18px 0; }
-    table.items { width: 100%; border-collapse: collapse; margin-bottom: 4px; }
-    table.items thead td { font-size: 10px; text-transform: uppercase; letter-spacing: .03em; color: #6b6b6b; border-bottom: 1px solid #1a1a1a; padding: 0 0 6px 0; }
-    table.items tbody td { padding: 10px 0; border-bottom: 1px solid #e5e5e5; font-size: 12px; vertical-align: top; }
-    table.items .desc-sub { color: #6b6b6b; font-size: 11px; }
-    .col-qty { text-align: center; width: 60px; }
-    .col-price { text-align: right; width: 90px; }
-    .col-amount { text-align: right; width: 90px; }
-    table.totals { width: 260px; float: right; margin-top: 10px; border-collapse: collapse; }
-    table.totals td { padding: 4px 0; font-size: 12px; }
-    table.totals td:last-child { text-align: right; }
-    table.totals tr.total td { border-top: 1px solid #1a1a1a; font-weight: 700; padding-top: 8px; }
-    table.totals tr.due td { font-weight: 700; }
-    .bank { clear: both; margin-top: 90px; padding-top: 16px; border-top: 1px solid #e5e5e5; }
-    .bank .title { font-weight: 700; margin-bottom: 6px; display: block; }
-    .bank td { padding: 1px 0; font-size: 11px; }
-    .bank .label { color: #6b6b6b; width: 110px; }
-    .footer { position: fixed; bottom: 24px; left: 48px; right: 48px; border-top: 1px solid #e5e5e5; padding-top: 8px; font-size: 10px; color: #6b6b6b; text-align: right; }
+    body { margin: 0; font-family: 'Inter', sans-serif; color: #262626; font-size: 11.5px; line-height: 1.45; }
+    table { border-collapse: collapse; }
+    .wrap { padding: 20px 46px 0 46px; }
+    .spacer { width: 5%; padding: 0; }
+
+    /* ---------------------------------------------------------------- masthead */
+    .masthead { background: #14110d; color: #ffffff; padding: 26px 46px 22px 46px; }
+    .masthead table { width: 100%; }
+    .masthead td { vertical-align: top; }
+    .monogram { width: 44px; height: 44px; background: #f59e0b; color: #14110d; border-radius: 11px;
+                text-align: center; line-height: 44px; font-size: 17px; font-weight: bold; letter-spacing: .03em; }
+    .brand-name { font-size: 16px; font-weight: bold; letter-spacing: -.005em; }
+    .brand-tag { font-size: 10px; color: #a8a29e; margin-top: 2px; }
+    .doc-cell { text-align: right; }
+    .doc-kind { font-size: 25px; font-weight: bold; letter-spacing: .16em; text-transform: uppercase; }
+    .doc-ref { font-size: 12px; color: #f59e0b; font-weight: 600; letter-spacing: .04em; margin-top: 3px; }
+    .pill { border-radius: 999px; padding: 5px 12px; font-size: 8.5px; font-weight: bold;
+            text-transform: uppercase; letter-spacing: .1em; }
+    .pill-due { background: #f59e0b; color: #14110d; }
+    .pill-paid { background: #34d399; color: #05372a; }
+    .pill-void { background: #57534e; color: #e7e5e4; }
+    .accent-rule { height: 3px; background: #f59e0b; font-size: 0; line-height: 0; }
+
+    /* ------------------------------------------------------------- fact strip */
+    .facts { width: 100%; margin-bottom: 12px; }
+    .facts td { width: 30%; border: 1px solid #ebe7e1; border-radius: 8px; padding: 8px 12px; vertical-align: top; }
+    /* Needs the .facts prefix: a bare .spacer loses to .facts td and every column
+       ends up the same width. */
+    .facts td.spacer { width: 5%; border: none; background: none; }
+    .facts td.highlight { background: #fffbeb; border-color: #fcd34d; }
+    .k { display: block; font-size: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: .1em;
+         color: #8a8377; margin-bottom: 3px; }
+    .facts .v { font-size: 12.5px; font-weight: 600; color: #14110d; }
+    .facts .highlight .v { color: #92400e; font-size: 14px; font-weight: bold; }
+
+    /* ---------------------------------------------------------------- parties */
+    .parties { width: 100%; margin-bottom: 14px; }
+    .parties td.party { width: 47.5%; border: 1px solid #ebe7e1; border-radius: 8px; padding: 10px 14px; vertical-align: top; }
+    .parties td.billed { background: #fafaf9; }
+    .who { font-size: 12.5px; font-weight: 600; color: #14110d; margin-bottom: 2px; }
+    .line { color: #57534e; font-size: 10.5px; }
+
+    /* ------------------------------------------------------------------ items */
+    .items { width: 100%; margin-bottom: 10px; }
+    .items thead td { background: #14110d; color: #ffffff; font-size: 8px; font-weight: bold;
+                      text-transform: uppercase; letter-spacing: .1em; padding: 8px 10px; }
+    .items thead td.first { border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
+    .items thead td.last { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
+    .items tbody td { padding: 7px 10px; border-bottom: 1px solid #f0ede8; vertical-align: top; font-size: 11.5px; }
+    .items tbody tr.alt td { background: #fafaf9; }
+    .items .idx { width: 26px; color: #a8a29e; font-size: 10px; }
+    .items .name { font-weight: 500; color: #14110d; }
+    .c-qty { width: 46px; text-align: center; }
+    .c-unit { width: 96px; text-align: right; }
+    .c-amount { width: 104px; text-align: right; font-weight: 600; color: #14110d; }
+
+    /* --------------------------------------------------- payment + totals row */
+    .recap { font-size: 10.5px; color: #78716c; margin-bottom: 7px; }
+    .summary { width: 100%; margin-top: 12px; page-break-inside: avoid; }
+    .summary td { vertical-align: top; }
+    .summary td.pay-cell { width: 57%; }
+    .summary td.tot-cell { width: 39%; }
+    .totals { width: 100%; }
+    .totals td { padding: 5px 12px; font-size: 11.5px; }
+    .totals td.amt { text-align: right; }
+    .totals tr.sep td { border-bottom: 1px solid #ebe7e1; }
+    /* One cell carries the dark background: two adjacent cells leave a hairline
+       seam between their fills in dompdf. */
+    .totals tr.grand td { background: #14110d; border-radius: 7px; padding: 9px 12px; }
+    .grand-inner { width: 100%; }
+    .grand-inner td { padding: 0; color: #ffffff; font-weight: bold; font-size: 13px; }
+    .grand-inner td.amt { text-align: right; }
+
+    /* ---------------------------------------------------------------- payment */
+    .payment { border: 1px solid #ebe7e1; border-left: 3px solid #f59e0b; border-radius: 8px; padding: 11px 14px; }
+    .payment .bank { width: 100%; margin-top: 6px; }
+    .payment .bank td { padding: 2px 0; font-size: 10.5px; vertical-align: top; }
+    .payment .bank td.label { width: 130px; color: #8a8377; }
+    .payment .bank td.value { font-weight: 500; color: #14110d; }
+    .terms { margin-top: 9px; padding-top: 8px; border-top: 1px solid #f0ede8; font-size: 9.5px; color: #8a8377; }
+
+    /* ----------------------------------------------------------------- footer */
+    .footer { position: fixed; bottom: 26px; left: 46px; right: 46px; border-top: 1px solid #ebe7e1;
+              padding-top: 7px; font-size: 8.5px; color: #a8a29e; }
+    .footer table { width: 100%; }
+    .footer .right { text-align: right; }
+    /* dompdf resolves counter(pages) to 0, so only the current page is printed. */
+    .page-num:before { content: "Page " counter(page); }
 </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Facture</h1>
-        <div class="brand">
-            <div class="name">{{ $settings->site_name }}</div>
-        </div>
-    </div>
 
-    <table class="meta">
-        <tr><td class="label">N° de facture</td><td>{{ $order->reference }}</td></tr>
-        <tr><td class="label">Date d'émission</td><td>{{ $order->created_at->translatedFormat('d F Y') }}</td></tr>
-        <tr><td class="label">Date d'échéance</td><td>{{ $order->created_at->translatedFormat('d F Y') }}</td></tr>
-    </table>
-
-    <table class="parties">
+<div class="masthead">
+    <table>
         <tr>
             <td>
-                <span class="title">{{ $settings->site_name }}</span>
-                @if($settings->contact_address){{ $settings->contact_address }}<br>@endif
-                @if($settings->contact_email){{ $settings->contact_email }}@endif
+                <table>
+                    <tr>
+                        <td class="monogram">{{ $initials !== '' ? $initials : 'F' }}</td>
+                        <td style="padding-left: 12px; vertical-align: middle;">
+                            <div class="brand-name">{{ $settings->site_name }}</div>
+                            @if($settings->tagline)
+                                <div class="brand-tag">{{ $settings->tagline }}</div>
+                            @endif
+                        </td>
+                    </tr>
+                </table>
             </td>
+            <td class="doc-cell">
+                <div class="doc-kind">Facture</div>
+                <div class="doc-ref">{{ $order->reference }}</div>
+                <table align="right" style="margin-top: 9px;">
+                    <tr>
+                        <td class="pill {{ $paid ? 'pill-paid' : ($order->status === 'cancelled' ? 'pill-void' : 'pill-due') }}">{{ $statusLabel }}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="accent-rule"></div>
+
+<div class="wrap">
+
+    <table class="facts">
+        <tr>
             <td>
-                <span class="title">Facturé à</span>
-                {{ $order->customer_name }}<br>
-                {{ $order->shipping_address }}<br>
-                {{ $order->customer_email }}
+                <span class="k">Date d'émission</span>
+                <span class="v">{{ $order->created_at->translatedFormat('d F Y') }}</span>
+            </td>
+            <td class="spacer"></td>
+            <td>
+                <span class="k">{{ $paid ? 'Réglée le' : 'Échéance' }}</span>
+                <span class="v">{{ $paid ? $order->paid_at->translatedFormat('d F Y') : 'À réception' }}</span>
+            </td>
+            <td class="spacer"></td>
+            <td class="highlight">
+                <span class="k">{{ $paid ? 'Montant réglé' : 'Montant dû' }}</span>
+                <span class="v">{{ $money($order->total) }}</span>
             </td>
         </tr>
     </table>
 
-    <div class="amount-line">
-        {{ \App\Support\MoneyFormatter::format($order->total, $settings->currency) }}
-        dû le {{ $order->created_at->translatedFormat('d F Y') }}
-    </div>
+    <table class="parties">
+        <tr>
+            <td class="party">
+                <span class="k">Émetteur</span>
+                <div class="who">{{ $settings->site_name }}</div>
+                @if($settings->contact_address)
+                    <div class="line">{!! nl2br(e($settings->contact_address)) !!}</div>
+                @endif
+                @if($settings->contact_email)
+                    <div class="line">{{ $settings->contact_email }}</div>
+                @endif
+                @if($settings->contact_phone)
+                    <div class="line">{{ $settings->contact_phone }}</div>
+                @endif
+            </td>
+            <td class="spacer"></td>
+            <td class="party billed">
+                <span class="k">Facturé à</span>
+                <div class="who">{{ $order->customer_name }}</div>
+                <div class="line">{!! nl2br(e($order->shipping_address)) !!}</div>
+                @if($country)
+                    <div class="line">{{ $country }}</div>
+                @endif
+                <div class="line">{{ $order->customer_email }}</div>
+            </td>
+        </tr>
+    </table>
 
     <table class="items">
         <thead>
             <tr>
-                <td>Description</td>
-                <td class="col-qty">Qté</td>
-                <td class="col-price">Prix unitaire</td>
-                <td class="col-amount">Montant</td>
+                <td class="first">#</td>
+                <td>Désignation</td>
+                <td class="c-qty">Qté</td>
+                <td class="c-unit">Prix unitaire</td>
+                <td class="c-amount last">Montant</td>
             </tr>
         </thead>
         <tbody>
             @foreach($order->items as $item)
-            <tr>
-                <td>{{ $item->product_name }}</td>
-                <td class="col-qty">{{ $item->quantity }}</td>
-                <td class="col-price">{{ \App\Support\MoneyFormatter::format($item->unit_price, $settings->currency) }}</td>
-                <td class="col-amount">{{ \App\Support\MoneyFormatter::format($item->unit_price * $item->quantity, $settings->currency) }}</td>
-            </tr>
+                <tr class="{{ $loop->even ? 'alt' : '' }}">
+                    <td class="idx">{{ $loop->iteration }}</td>
+                    <td class="name">{{ $item->product_name }}</td>
+                    <td class="c-qty">{{ $item->quantity }}</td>
+                    <td class="c-unit">{{ $money($item->unit_price) }}</td>
+                    <td class="c-amount">{{ $money($item->unit_price * $item->quantity) }}</td>
+                </tr>
             @endforeach
         </tbody>
     </table>
 
-    <table class="totals">
-        <tr><td>Sous-total</td><td>{{ \App\Support\MoneyFormatter::format($order->subtotal, $settings->currency) }}</td></tr>
-        <tr><td>Livraison</td><td>{{ $order->shipping > 0 ? \App\Support\MoneyFormatter::format($order->shipping, $settings->currency) : 'Gratuite' }}</td></tr>
-        <tr><td>Taxe</td><td>{{ \App\Support\MoneyFormatter::format($order->tax, $settings->currency) }}</td></tr>
-        <tr class="total"><td>Total</td><td>{{ \App\Support\MoneyFormatter::format($order->total, $settings->currency) }}</td></tr>
-        <tr class="due"><td>Montant dû</td><td>{{ \App\Support\MoneyFormatter::format($order->total, $settings->currency) }}</td></tr>
+    {{-- Payment details fill the space beside the totals instead of pushing a
+         short invoice onto a second page. --}}
+    <table class="summary">
+        <tr>
+            <td class="pay-cell">
+                <div class="recap">
+                    {{ $order->items->count() }} {{ $order->items->count() > 1 ? 'références' : 'référence' }},
+                    {{ $unitCount }} {{ $unitCount > 1 ? 'articles' : 'article' }}
+                </div>
+                <div class="payment">
+                    @if($settings->bank_iban)
+                        <span class="k">Règlement par virement bancaire</span>
+                        <table class="bank">
+                            @if($settings->bank_account_holder)
+                                <tr><td class="label">Titulaire</td><td class="value">{{ $settings->bank_account_holder }}</td></tr>
+                            @endif
+                            @if($settings->bank_name)
+                                <tr><td class="label">Banque</td><td class="value">{{ $settings->bank_name }}</td></tr>
+                            @endif
+                            <tr><td class="label">IBAN</td><td class="value">{{ $settings->bank_iban }}</td></tr>
+                            @if($settings->bank_bic)
+                                <tr><td class="label">BIC / SWIFT</td><td class="value">{{ $settings->bank_bic }}</td></tr>
+                            @endif
+                            <tr><td class="label">Référence</td><td class="value">{{ $order->reference }}</td></tr>
+                        </table>
+                    @else
+                        <span class="k">Règlement</span>
+                        <table class="bank">
+                            <tr><td class="label">Référence</td><td class="value">{{ $order->reference }}</td></tr>
+                            @if($settings->contact_email)
+                                <tr><td class="label">Contact</td><td class="value">{{ $settings->contact_email }}</td></tr>
+                            @endif
+                        </table>
+                    @endif
+
+                    <div class="terms">
+                        @if($paid)
+                            Facture acquittée le {{ $order->paid_at->translatedFormat('d F Y') }}. Aucun montant restant dû.
+                        @else
+                            Facture payable à réception. Merci de rappeler la référence lors de votre règlement.
+                        @endif
+                    </div>
+                </div>
+            </td>
+            <td class="spacer"></td>
+            <td class="tot-cell">
+                <table class="totals">
+                    <tr>
+                        <td>Sous-total</td>
+                        <td class="amt">{{ $money($order->subtotal) }}</td>
+                    </tr>
+                    <tr>
+                        <td>Livraison</td>
+                        <td class="amt">{{ $order->shipping > 0 ? $money($order->shipping) : 'Offerte' }}</td>
+                    </tr>
+                    <tr class="sep">
+                        <td>TVA ({{ $taxPercent }} %)</td>
+                        <td class="amt">{{ $money($order->tax) }}</td>
+                    </tr>
+                    <tr class="grand">
+                        <td colspan="2">
+                            <table class="grand-inner">
+                                <tr>
+                                    <td>Total TTC</td>
+                                    <td class="amt">{{ $money($order->total) }}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
     </table>
 
-    @if($settings->bank_iban)
-    <div class="bank">
-        <span class="title">Modalités de règlement : Virement bancaire</span>
-        <table>
-            @if($settings->bank_account_holder)<tr><td class="label">Titulaire</td><td>{{ $settings->bank_account_holder }}</td></tr>@endif
-            @if($settings->bank_name)<tr><td class="label">Banque</td><td>{{ $settings->bank_name }}</td></tr>@endif
-            <tr><td class="label">IBAN</td><td>{{ $settings->bank_iban }}</td></tr>
-            @if($settings->bank_bic)<tr><td class="label">BIC / SWIFT</td><td>{{ $settings->bank_bic }}</td></tr>@endif
-            <tr><td class="label">Référence</td><td>{{ $order->reference }}</td></tr>
-        </table>
-    </div>
-    @endif
+</div>
 
-    <div class="footer">{{ $settings->site_name }}  {{ $order->reference }}</div>
+<div class="footer">
+    <table>
+        <tr>
+            <td>{{ $settings->site_name }}@if($settings->contact_email) · {{ $settings->contact_email }}@endif</td>
+            <td class="right">Facture {{ $order->reference }} · <span class="page-num"></span></td>
+        </tr>
+    </table>
+</div>
+
 </body>
 </html>
