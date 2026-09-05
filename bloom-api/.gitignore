@@ -22,3 +22,8 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# LWS deployment bundle
+/deploy/
+*-deploy.zip
+bloom_ecommerce_velo.sql

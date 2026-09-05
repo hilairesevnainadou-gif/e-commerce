@@ -124,3 +124,4 @@ C:\xampp\htdocs\ecommerce\bloomtpl-1.0.0\.next\dev\server\chunks\ssr\_64904b7d._
  GET / 200 in 2.5s (compile: 15ms, render: 2.4s)
  GET / 200 in 4.3s (compile: 74ms, render: 4.2s)
  GET / 200 in 2.5s (compile: 13ms, render: 2.5s)
+ GET / 200 in 6.0s (compile: 58ms, render: 6.0s)
