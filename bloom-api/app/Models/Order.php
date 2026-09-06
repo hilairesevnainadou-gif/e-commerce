@@ -11,6 +11,14 @@ class Order extends Model
 {
     use HasFactory;
 
+    /**
+     * Prefixes for the human-facing document references, following the French
+     * accounting convention: FA for a facture, RE for its receipt.
+     */
+    public const INVOICE_PREFIX = 'FA';
+
+    public const RECEIPT_PREFIX = 'RE';
+
     protected $fillable = [
         'user_id',
         'status',
@@ -37,19 +45,32 @@ class Order extends Model
     }
 
     /**
-     * Human-facing invoice reference, e.g. "BLOOM-000042".
+     * Human-facing invoice reference, e.g. "FA-2026-000042".
      */
     public function getReferenceAttribute(): string
     {
-        return 'BLOOM-'.str_pad((string) $this->id, 6, '0', STR_PAD_LEFT);
+        return $this->documentReference(self::INVOICE_PREFIX);
     }
 
     /**
-     * Receipt reference, only meaningful once the order is paid.
+     * Receipt reference, only meaningful once the order is paid, e.g.
+     * "RE-2026-000042".
      */
     public function getReceiptReferenceAttribute(): string
     {
-        return $this->reference.'-R';
+        return $this->documentReference(self::RECEIPT_PREFIX);
+    }
+
+    /**
+     * Both documents carry the issue year and the same sequence, so a receipt
+     * can be matched to its invoice at a glance. The year comes from the order
+     * date rather than the payment date to keep that pairing intact.
+     */
+    private function documentReference(string $prefix): string
+    {
+        $year = ($this->created_at ?? now())->format('Y');
+
+        return $prefix.'-'.$year.'-'.str_pad((string) $this->id, 6, '0', STR_PAD_LEFT);
     }
 
     public function user(): BelongsTo

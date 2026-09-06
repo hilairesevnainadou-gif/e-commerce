@@ -34,6 +34,6 @@ class OrderPdfController extends Controller
         $pdf = Pdf::loadView('pdf.receipt', compact('order', 'settings'));
         PdfFonts::register($pdf->getDomPDF());
 
-        return $pdf->stream("recu-{$order->reference}.pdf");
+        return $pdf->stream("recu-{$order->receipt_reference}.pdf");
     }
 }
