@@ -46,19 +46,19 @@
     .masthead { background: #14110d; color: #ffffff; padding: 26px 46px 22px 46px; }
     .masthead table { width: 100%; }
     .masthead td { vertical-align: top; }
-    .monogram { width: 44px; height: 44px; background: #f59e0b; color: #14110d; border-radius: 11px;
+    .monogram { width: 44px; height: 44px; background: #c19a5b; color: #14110d; border-radius: 11px;
                 text-align: center; line-height: 44px; font-size: 17px; font-weight: bold; letter-spacing: .03em; }
     .brand-name { font-size: 16px; font-weight: bold; letter-spacing: -.005em; }
     .brand-tag { font-size: 10px; color: #a8a29e; margin-top: 2px; }
     .doc-cell { text-align: right; }
     .doc-kind { font-size: 25px; font-weight: bold; letter-spacing: .16em; text-transform: uppercase; }
-    .doc-ref { font-size: 12px; color: #f59e0b; font-weight: 600; letter-spacing: .04em; margin-top: 3px; }
+    .doc-ref { font-size: 12px; color: #d4b483; font-weight: 600; letter-spacing: .04em; margin-top: 3px; }
     .pill { border-radius: 999px; padding: 5px 12px; font-size: 8.5px; font-weight: bold;
             text-transform: uppercase; letter-spacing: .1em; }
-    .pill-due { background: #f59e0b; color: #14110d; }
-    .pill-paid { background: #34d399; color: #05372a; }
+    .pill-due { background: #c19a5b; color: #14110d; }
+    .pill-paid { background: #7d9d8a; color: #12251a; }
     .pill-void { background: #57534e; color: #e7e5e4; }
-    .accent-rule { height: 3px; background: #f59e0b; font-size: 0; line-height: 0; }
+    .accent-rule { height: 3px; background: #c19a5b; font-size: 0; line-height: 0; }
 
     /* ------------------------------------------------------------- fact strip */
     .facts { width: 100%; margin-bottom: 12px; }
@@ -66,11 +66,11 @@
     /* Needs the .facts prefix: a bare .spacer loses to .facts td and every column
        ends up the same width. */
     .facts td.spacer { width: 5%; border: none; background: none; }
-    .facts td.highlight { background: #fffbeb; border-color: #fcd34d; }
+    .facts td.highlight { background: #faf7f0; border-color: #e0cfa8; }
     .k { display: block; font-size: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: .1em;
          color: #8a8377; margin-bottom: 3px; }
     .facts .v { font-size: 12.5px; font-weight: 600; color: #14110d; }
-    .facts .highlight .v { color: #92400e; font-size: 14px; font-weight: bold; }
+    .facts .highlight .v { color: #8a6a30; font-size: 14px; font-weight: bold; }
 
     /* ---------------------------------------------------------------- parties */
     .parties { width: 100%; margin-bottom: 14px; }
@@ -111,7 +111,7 @@
     .grand-inner td.amt { text-align: right; }
 
     /* ---------------------------------------------------------------- payment */
-    .payment { border: 1px solid #ebe7e1; border-left: 3px solid #f59e0b; border-radius: 8px; padding: 11px 14px; }
+    .payment { border: 1px solid #ebe7e1; border-left: 3px solid #c19a5b; border-radius: 8px; padding: 11px 14px; }
     .payment .bank { width: 100%; margin-top: 6px; }
     .payment .bank td { padding: 2px 0; font-size: 10.5px; vertical-align: top; }
     .payment .bank td.label { width: 130px; color: #8a8377; }
