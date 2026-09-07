@@ -17,6 +17,8 @@ class ImportCatalog extends Command
         {--replace : Supprime le catalogue existant avant d\'importer}
         {--force : Ne demande pas confirmation avant la suppression (déploiement automatisé)}
         {--default-stock=0 : Stock appliqué aux produits dont le feed ne précise pas la quantité}
+        {--adjust= : Ajustement des prix en pourcentage, ex. -20 pour vendre 20 % sous le tarif fournisseur}
+        {--keep-reference : Avec --adjust, conserve le prix fournisseur en prix barré}
         {--dry-run : Analyse le fichier et affiche le plan sans rien écrire}';
 
     protected $description = "Importe un catalogue fournisseur au format JSON";
@@ -92,7 +94,31 @@ class ImportCatalog extends Command
         $existingProducts = Product::count();
         $affectedReviews = Review::count();
 
+        $adjust = $this->option('adjust');
+        if ($adjust !== null && ! is_numeric($adjust)) {
+            $this->error('--adjust attend un pourcentage, par exemple -20.');
+
+            return self::FAILURE;
+        }
+
+        // -20 means "sell 20 % below the supplier's price", so 0.80.
+        $priceFactor = $adjust === null ? 1.0 : 1 + ((float) $adjust / 100);
+        if ($priceFactor <= 0) {
+            $this->error('--adjust ne peut pas ramener les prix à zéro ou en dessous.');
+
+            return self::FAILURE;
+        }
+
         $this->info(count($rows).' produit(s) valides dans '.basename($path));
+
+        if ($adjust !== null) {
+            $this->line(sprintf(
+                'Prix ajustés de %s%% (facteur %.2f)%s.',
+                $adjust > 0 ? '+'.$adjust : $adjust,
+                $priceFactor,
+                $this->option('keep-reference') ? ', tarif fournisseur conservé en prix barré' : ''
+            ));
+        }
 
         if ($this->option('replace')) {
             $this->warn("--replace supprimera {$existingProducts} produit(s) existant(s).");
@@ -113,7 +139,8 @@ class ImportCatalog extends Command
                 collect($rows)->take(15)->map(fn ($row) => [
                     $row['category'],
                     Str::limit($row['name'], 40),
-                    $row['price'],
+                    round((float) $row['price'] * $priceFactor, 2)
+                        .($priceFactor === 1.0 ? '' : ' (au lieu de '.$row['price'].')'),
                     $row['stock'] ?? $defaultStock,
                     count($row['images'] ?? []),
                 ])->all()
@@ -136,7 +163,7 @@ class ImportCatalog extends Command
         $imported = 0;
         $categoriesCreated = 0;
 
-        DB::transaction(function () use ($rows, $defaultStock, &$imported, &$categoriesCreated) {
+        DB::transaction(function () use ($rows, $defaultStock, $priceFactor, &$imported, &$categoriesCreated) {
             if ($this->option('replace')) {
                 // Cascades to product_images and reviews; order_items keep their
                 // denormalised name and price and simply lose the foreign key.
@@ -161,13 +188,23 @@ class ImportCatalog extends Command
                     $categories[$slug] = $category;
                 }
 
+                $supplierPrice = (float) $row['price'];
+                $price = round($supplierPrice * $priceFactor, 2);
+
+                // A crossed-out price must be one that was actually charged, so
+                // it is only carried over when the feed supplies one — or when
+                // --keep-reference explicitly asks for the supplier tariff.
+                $reference = filled($row['compare_at_price'] ?? null)
+                    ? round((float) $row['compare_at_price'] * $priceFactor, 2)
+                    : ($this->option('keep-reference') && $price < $supplierPrice ? $supplierPrice : null);
+
                 $product = Product::create([
                     'category_id' => $categories[$slug]->id,
                     'name' => $row['name'],
                     'slug' => $this->uniqueSlug($row['name']),
                     'description' => $row['description'] ?? null,
-                    'price' => $row['price'],
-                    'compare_at_price' => filled($row['compare_at_price'] ?? null) ? $row['compare_at_price'] : null,
+                    'price' => $price,
+                    'compare_at_price' => $reference,
                     'sizes' => $row['sizes'] ?? null,
                     'colors' => $row['colors'] ?? null,
                     'stock' => $row['stock'] ?? $defaultStock,
