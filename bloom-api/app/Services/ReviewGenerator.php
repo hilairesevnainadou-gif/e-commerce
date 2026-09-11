@@ -97,6 +97,81 @@ class ReviewGenerator
         }
     }
 
+    /**
+     * Replace a product's reviews with a set whose mean is exactly $target.
+     *
+     * Ratings are integers, so a .5 average needs an even number of reviews —
+     * the count is nudged up when necessary rather than silently landing a
+     * rounding step away from the target.
+     */
+    public static function syncWithAverage(Product $product, float $target, int $count): int
+    {
+        $count = max(2, $count);
+
+        if (abs($target * $count - round($target * $count)) > 0.0001) {
+            $count++;
+        }
+
+        $product->reviews()->delete();
+
+        $rows = [];
+        foreach (self::ratingsForAverage($target, $count) as $rating) {
+            $rows[] = self::reviewRow($product->id, $rating);
+        }
+
+        foreach (array_chunk($rows, 50) as $chunk) {
+            DB::table('reviews')->insert($chunk);
+        }
+
+        return $count;
+    }
+
+    /**
+     * @return list<int> ratings within 1..5 whose mean is exactly $target
+     */
+    private static function ratingsForAverage(float $target, int $count): array
+    {
+        $sum = (int) round($target * $count);
+        $floor = (int) floor($target);
+
+        // Flat base, then hand out the remainder one point at a time.
+        $ratings = array_fill(0, $count, $floor);
+        for ($i = 0, $left = $sum - $floor * $count; $i < $left; $i++) {
+            $ratings[$i]++;
+        }
+
+        // A half-and-half histogram looks fabricated, so shift points between
+        // reviews — the total, and therefore the average, is preserved.
+        for ($i = 0; $i < $count; $i++) {
+            $a = array_rand($ratings);
+            $b = array_rand($ratings);
+
+            if ($a !== $b && $ratings[$a] > 1 && $ratings[$b] < 5) {
+                $ratings[$a]--;
+                $ratings[$b]++;
+            }
+        }
+
+        shuffle($ratings);
+
+        return $ratings;
+    }
+
+    private static function reviewRow(int $productId, int $rating): array
+    {
+        $createdAt = now()->subDays(rand(1, 240))->subMinutes(rand(0, 1440));
+
+        return [
+            'product_id' => $productId,
+            'author_name' => self::FIRST_NAMES[array_rand(self::FIRST_NAMES)].' '.self::LAST_NAMES[array_rand(self::LAST_NAMES)],
+            'country' => self::COUNTRIES[array_rand(self::COUNTRIES)],
+            'rating' => $rating,
+            'comment' => self::commentForRating($rating),
+            'created_at' => $createdAt,
+            'updated_at' => $createdAt,
+        ];
+    }
+
     public static function randomReviewRow(int $productId): array
     {
         $rating = self::randomRating();
